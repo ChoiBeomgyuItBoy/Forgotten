@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[RequireComponent(typeof(InputReader), typeof(CharacterController), typeof(ForceReceiver))]
 public class PlayerStateMachine : StateMachine
 {
     [field: Header("References")]
@@ -10,6 +11,7 @@ public class PlayerStateMachine : StateMachine
     [field: Header("Values")]
     [field: SerializeField] [field: Range(0.1f, 100f)] public float MouseSensitivity { get; private set; }
     [field: SerializeField] [field: Range(0.1f, 20f)] public float MovementSpeed { get; private set; }
+    [field: SerializeField] [field: Range(0.1f, 10f)] public float JumpForce { get; private set; }
 
     public Transform MainCameraTransform { get; private set; }
 

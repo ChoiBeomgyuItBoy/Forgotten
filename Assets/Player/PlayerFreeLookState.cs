@@ -3,10 +3,14 @@ using UnityEngine;
 public class PlayerFreeLookState : PlayerBaseState
 {
     private float xRotation = 0f;
+    private float xRotationLimit = 90f;
 
     public PlayerFreeLookState(PlayerStateMachine stateMachine) : base(stateMachine) { }
 
-    public override void Enter() { }
+    public override void Enter() 
+    { 
+        stateMachine.InputReader.JumpEvent += HandleJump;
+    }
 
     public override void Tick(float deltaTime)
     {
@@ -17,7 +21,15 @@ public class PlayerFreeLookState : PlayerBaseState
         MouseRotation(stateMachine.InputReader.MouseValue, deltaTime);
     }
 
-    public override void Exit() { }
+    public override void Exit() 
+    { 
+        stateMachine.InputReader.JumpEvent -= HandleJump;
+    }
+
+    private void HandleJump()
+    {
+        stateMachine.ForceReceiver.Jump(stateMachine.JumpForce);
+    }
 
     private Vector3 CalculateMovement()
     {
@@ -35,7 +47,7 @@ public class PlayerFreeLookState : PlayerBaseState
         float mouseY = mouseMovement.y * stateMachine.MouseSensitivity * deltaTime;
 
         xRotation -= mouseY;
-        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+        xRotation = Mathf.Clamp(xRotation, -xRotationLimit, xRotationLimit);
 
         stateMachine.transform.Rotate(Vector3.up * mouseX);
         stateMachine.MainCameraTransform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
