@@ -2,12 +2,14 @@ using UnityEngine;
 using UnityEngine.AI;
 
 [RequireComponent(typeof(CharacterController), typeof(NavMeshAgent), typeof(ForceReceiver))]
+[RequireComponent(typeof(Animator), typeof(EnemyAnimationHandler))]
 public class EnemyStateMachine : StateMachine
 {
     [field: Header("References")]
     [field: SerializeField] public CharacterController Controller { get; private set; }
     [field: SerializeField] public ForceReceiver ForceReceiver { get; private set; }
     [field: SerializeField] public NavMeshAgent Agent { get; private set; }
+    [field: SerializeField] public EnemyAnimationHandler AnimationHandler { get; private set; }
 
     [field: Header("Values")]
     [field: SerializeField] [field: Range(0.1f, 20f)] public float MovementSpeed { get; private set; }

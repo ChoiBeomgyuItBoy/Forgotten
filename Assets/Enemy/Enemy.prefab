@@ -779,6 +779,7 @@ GameObject:
   - component: {fileID: 87395006826158792}
   - component: {fileID: 1144666717831742764}
   - component: {fileID: 2700091715649971803}
+  - component: {fileID: 3322892625484590829}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -853,7 +854,7 @@ Animator:
   m_GameObject: {fileID: 87395006835678946}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 1c345d5c2a9b820439fe3bd81aa11b09, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4dccb251565cb094c9b21397cec0d7a2, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -878,9 +879,10 @@ MonoBehaviour:
   <Controller>k__BackingField: {fileID: 87395006831124138}
   <ForceReceiver>k__BackingField: {fileID: 2700091715649971803}
   <Agent>k__BackingField: {fileID: 8661818427064148117}
+  <AnimationHandler>k__BackingField: {fileID: 3322892625484590829}
   <MovementSpeed>k__BackingField: 3
   <ChaseRange>k__BackingField: 16
-  <AttackRange>k__BackingField: 3
+  <AttackRange>k__BackingField: 3.33
 --- !u!114 &2700091715649971803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -894,6 +896,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 87395006831124138}
+--- !u!114 &3322892625484590829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 87395006835678946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d76d8638bc73234fa46e6e0affc225f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 87395006826158792}
 --- !u!1 &87395006835679776
 GameObject:
   m_ObjectHideFlags: 0
