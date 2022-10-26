@@ -5,6 +5,7 @@ public class PlayerStateMachine : StateMachine
     [field: Header("References")]
     [field: SerializeField] public InputReader InputReader { get; private set; }
     [field: SerializeField] public CharacterController Controller { get; private set; }
+    [field: SerializeField] public ForceReceiver ForceReceiver { get; private set; }
 
     [field: Header("Values")]
     [field: SerializeField] [field: Range(0.1f, 100f)] public float MouseSensitivity { get; private set; }
@@ -14,6 +15,9 @@ public class PlayerStateMachine : StateMachine
 
     private void Start()
     {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+
         MainCameraTransform = Camera.main.transform;
 
         SwitchState(new PlayerFreeLookState(this));
