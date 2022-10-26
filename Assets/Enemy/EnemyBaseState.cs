@@ -27,11 +27,22 @@ public abstract class EnemyBaseState : State
         Vector3 playerPosition = stateMachine.Player.transform.position;
 
         float distanceToPlayerSqr = (myPosition - playerPosition).sqrMagnitude;
-        float playerChasingRangeSqr = stateMachine.PlayerChasingRange * stateMachine.PlayerChasingRange;
+        float chaseRangeSqr = stateMachine.ChaseRange * stateMachine.ChaseRange;
 
-        return distanceToPlayerSqr <= playerChasingRangeSqr;
-    }
+        return distanceToPlayerSqr <= chaseRangeSqr;
+    } 
 
+    protected bool IsInAttackRange()
+    {
+        Vector3 myPosition = stateMachine.transform.position;
+        Vector3 playerPosition = stateMachine.Player.transform.position;
+
+        float distanceToPlayerSqr = (myPosition - playerPosition).sqrMagnitude;
+        float attackRangeSqr = stateMachine.AttackRange * stateMachine.AttackRange;
+
+        return distanceToPlayerSqr <= attackRangeSqr;
+    }   
+    
     protected void FacePlayer()
     {
         if(stateMachine.Player == null) { return; }

@@ -19,6 +19,12 @@ public class EnemyChaseState : EnemyBaseState
             stateMachine.SwitchState(new EnemyIdleState(stateMachine));
             return;
         }
+
+        else if(IsInAttackRange())
+        {
+            stateMachine.SwitchState(new EnemyAttackState(stateMachine));
+            return;
+        }
     }
 
     public override void Exit() 

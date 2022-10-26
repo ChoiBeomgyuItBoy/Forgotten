@@ -10,8 +10,9 @@ public class EnemyStateMachine : StateMachine
     [field: SerializeField] public NavMeshAgent Agent { get; private set; }
 
     [field: Header("Values")]
-    [field: SerializeField] [field: Range(0.1f, 50f)] public float PlayerChasingRange { get; private set; }
     [field: SerializeField] [field: Range(0.1f, 20f)] public float MovementSpeed { get; private set; }
+    [field: SerializeField] [field: Range(0.1f, 50f)] public float ChaseRange { get; private set; }
+    [field: SerializeField] [field: Range(0.1f, 20f)] public float AttackRange { get; private set; }
 
     public GameObject Player { get; private set; }
 
@@ -27,6 +28,13 @@ public class EnemyStateMachine : StateMachine
 
     private void OnDrawGizmosSelected()
     {
-        Gizmos.DrawWireSphere(transform.position, PlayerChasingRange);
+        // Chase Range Gizmos
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, ChaseRange);
+
+        // Attack Range Gizmos
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, AttackRange);
     }
+
 }

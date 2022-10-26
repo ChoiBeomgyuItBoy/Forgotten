@@ -801,7 +801,7 @@ Transform:
   - {fileID: 87395006835581256}
   - {fileID: 87395006835481424}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!195 &8661818427064148117
 NavMeshAgent:
@@ -878,8 +878,9 @@ MonoBehaviour:
   <Controller>k__BackingField: {fileID: 87395006831124138}
   <ForceReceiver>k__BackingField: {fileID: 2700091715649971803}
   <Agent>k__BackingField: {fileID: 8661818427064148117}
-  <PlayerChasingRange>k__BackingField: 13.6
   <MovementSpeed>k__BackingField: 3
+  <ChaseRange>k__BackingField: 16
+  <AttackRange>k__BackingField: 3
 --- !u!114 &2700091715649971803
 MonoBehaviour:
   m_ObjectHideFlags: 0
