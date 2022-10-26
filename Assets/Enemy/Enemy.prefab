@@ -776,7 +776,7 @@ GameObject:
   - component: {fileID: 87395006835548212}
   - component: {fileID: 8661818427064148117}
   - component: {fileID: 87395006831124138}
-  - component: {fileID: 87395006826158792}
+  - component: {fileID: 6322154895156260266}
   - component: {fileID: 1144666717831742764}
   - component: {fileID: 2700091715649971803}
   - component: {fileID: 3322892625484590829}
@@ -802,7 +802,7 @@ Transform:
   - {fileID: 87395006835581256}
   - {fileID: 87395006835481424}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!195 &8661818427064148117
 NavMeshAgent:
@@ -844,7 +844,7 @@ CharacterController:
   m_SkinWidth: 0.081
   m_MinMoveDistance: 0
   m_Center: {x: 0, y: 1.1, z: 0}
---- !u!95 &87395006826158792
+--- !u!95 &6322154895156260266
 Animator:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -855,7 +855,7 @@ Animator:
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 1c345d5c2a9b820439fe3bd81aa11b09, type: 3}
   m_Controller: {fileID: 9100000, guid: 4dccb251565cb094c9b21397cec0d7a2, type: 2}
-  m_CullingMode: 1
+  m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
@@ -905,10 +905,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 87395006835678946}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d76d8638bc73234fa46e6e0affc225f, type: 3}
+  m_Script: {fileID: 11500000, guid: 279165a76e81a6249a32e72abdf76bd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 87395006826158792}
+  myAnimator: {fileID: 6322154895156260266}
 --- !u!1 &87395006835679776
 GameObject:
   m_ObjectHideFlags: 0

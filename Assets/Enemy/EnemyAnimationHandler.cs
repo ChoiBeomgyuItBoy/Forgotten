@@ -1,20 +1,30 @@
 using UnityEngine;
 
-public class EnemyAnimationHandler : MonoBehaviour
+[RequireComponent(typeof(Animator))]
+public class EnemyAnimationHandler : AnimationHandler
 {
-    [SerializeField] Animator animator;
+    [SerializeField] private Animator myAnimator;
 
-    // Locomotion
+    // Locomotion Blend Tree
+    private const float LocomotionTransitionTime = 0.1f;
+    private const float IdleBlendValue = 0f;
+    private const float IdleDampTime = 0.1f;
+    private const float RunBlendValue  = 1f;
     private readonly int LocomotionBlendTreeHash = Animator.StringToHash("Locomotion");
     private readonly int LocomotionSpeedHash = Animator.StringToHash("Speed");
 
-    public void SetLocomotionBlendTree(float value, float dampTime, float deltaTime)
+    public void TransitionToLocomotion()
     {
-        animator.SetFloat(LocomotionSpeedHash, value, dampTime, deltaTime);
+        PlayAnimationSmoothly(myAnimator, LocomotionBlendTreeHash, LocomotionTransitionTime);
     }
 
-    public void PlayLocomotionBlendTree(float crossFadeDuration)
+    public void PlayIdle(float deltaTime)
     {
-        animator.CrossFadeInFixedTime(LocomotionBlendTreeHash, crossFadeDuration);
+        SetBlendTreeValue(myAnimator, LocomotionSpeedHash, IdleBlendValue, IdleDampTime, deltaTime);
+    }
+
+    public void PlayRun(float deltaTime)
+    {
+        SetBlendTreeValue(myAnimator, LocomotionSpeedHash, RunBlendValue, IdleDampTime, deltaTime);
     }
 }

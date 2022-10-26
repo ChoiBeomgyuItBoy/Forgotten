@@ -2,14 +2,11 @@ using UnityEngine;
 
 public class EnemyChaseState : EnemyBaseState
 {
-    private const float CrossFadeDuration = 0.1f;
-    private const float AnimatorDampTime = 0.1f;
-
     public EnemyChaseState(EnemyStateMachine stateMachine) : base(stateMachine) { }
 
     public override void Enter() 
     { 
-        stateMachine.AnimationHandler.PlayLocomotionBlendTree(CrossFadeDuration);
+        stateMachine.AnimationHandler.TransitionToLocomotion();
     }
 
     public override void Tick(float deltaTime)
@@ -32,7 +29,7 @@ public class EnemyChaseState : EnemyBaseState
             return;
         }
 
-        stateMachine.AnimationHandler.SetLocomotionBlendTree(1f, AnimatorDampTime, deltaTime);
+        stateMachine.AnimationHandler.PlayRun(deltaTime);
     }
 
     public override void Exit() 
