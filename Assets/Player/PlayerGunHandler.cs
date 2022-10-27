@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
 
 public class PlayerGunHandler : MonoBehaviour
@@ -6,13 +6,13 @@ public class PlayerGunHandler : MonoBehaviour
     private Gun currentGun;
     private const int InventorySize = 2;
 
-    [SerializeField] private Transform primaryGunPlacer;
-    [SerializeField] private Transform secondaryGunPlacer;
-
+    [SerializeField] private Transform gunPlacer;
     [SerializeField] private Gun primaryGun;
     [SerializeField] private Gun secondaryGun;
 
     private GameObject[] pool;
+
+    private bool canShoot = true;
 
     private void OnEnable()
     {
@@ -23,14 +23,14 @@ public class PlayerGunHandler : MonoBehaviour
     {
         pool = new GameObject[InventorySize];
 
-        pool[0] = primaryGun?.InstantiateGun(primaryGunPlacer, primaryGunPlacer);
-        pool[1] = secondaryGun?.InstantiateGun(secondaryGunPlacer, secondaryGunPlacer);
+        pool[0] = primaryGun?.InstantiateGun(gunPlacer, gunPlacer);
+        pool[1] = secondaryGun?.InstantiateGun(gunPlacer, gunPlacer);
 
         pool[0]?.SetActive(false);
         pool[1]?.SetActive(false);
     }
 
-    public void ChoosePrimaryWeapon()
+    public void ChoosePrimaryGun()
     {
         if(primaryGun == null) { return; }
 
@@ -40,7 +40,7 @@ public class PlayerGunHandler : MonoBehaviour
         pool[1]?.SetActive(false);
     }
 
-    public void ChooseSecondaryWeapon()
+    public void ChooseSecondaryGun()
     {
         if(secondaryGun == null) { return; }
 
@@ -50,8 +50,35 @@ public class PlayerGunHandler : MonoBehaviour
         pool[1]?.SetActive(true);        
     }
 
+    public void DisableGuns()
+    {
+        if(primaryGun == null) { return; }
+        if(secondaryGun == null) { return; }
+
+        currentGun = null;
+
+        pool[0]?.SetActive(false);
+        pool[1]?.SetActive(false); 
+    }
+
     public void ShootCurrentGun(Transform center)
     {
-        currentGun?.Shoot(center);
+        if(currentGun == null) { return; }
+
+        if(canShoot) 
+        { 
+            currentGun?.Shoot(center);
+            currentGun?.TryPlayVFX();
+            StartCoroutine(CanShoot(currentGun.ShootingDelay));
+        }
+    }
+
+    private IEnumerator CanShoot(float time)
+    {
+        canShoot = false;
+
+        yield return new WaitForSeconds(time);
+
+        canShoot = true;
     }
 }

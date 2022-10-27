@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Gun", menuName = "Gun")]
@@ -8,6 +9,23 @@ public class Gun : ScriptableObject
     [field: SerializeField] public int GunDamage { get; private set; }
     [field: SerializeField] public float ShootingRange { get; private set; } = 100f;
     [field: SerializeField] public float ShootingDelay { get; private set; }
+
+    public ParticleSystem GunVFX { get; private set; }
+
+    public void TryPlayVFX()
+    {
+        foreach(Transform child in GunModel.transform)
+        {
+            GunVFX = child.GetComponent<ParticleSystem>();
+
+            if(GunVFX != null)
+            {
+                Debug.Log("Playing Particle System");
+                GunVFX.Play();
+                return;
+            }
+        }
+    }
 
     public void Shoot(Transform center)
     {

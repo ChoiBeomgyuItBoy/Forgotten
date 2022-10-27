@@ -11,6 +11,7 @@ public class InputReader : MonoBehaviour, Controls.IPlayerActions
     public event Action FireEvent;
     public event Action PrimaryGunEvent;
     public event Action SecondaryGunEvent;
+    public event Action WithoutWeaponEvent;
 
     private Controls controls;
 
@@ -64,5 +65,12 @@ public class InputReader : MonoBehaviour, Controls.IPlayerActions
         if(!context.performed) { return; }
 
         SecondaryGunEvent?.Invoke();
+    }
+
+    public void OnWithoutWeapon(InputAction.CallbackContext context)
+    {
+        if(!context.performed) { return; }
+
+        WithoutWeaponEvent?.Invoke();
     }
 }

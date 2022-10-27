@@ -80,6 +80,15 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""WithoutWeapon"",
+                    ""type"": ""Button"",
+                    ""id"": ""1c289e48-db69-4f37-bc9e-883efaa460d2"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -140,33 +149,11 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""7f7a9d61-5401-4b1a-afbd-26bf40fbdedb"",
-                    ""path"": ""<Gamepad>/leftStick"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Gamepad"",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""5fbb59b5-6e08-4ccf-a4db-68cdfb1a85de"",
                     ""path"": ""<Mouse>/delta"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard & Mouse"",
-                    ""action"": ""Look"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""45593caa-2717-4b6b-abd5-d488672bb185"",
-                    ""path"": ""<Gamepad>/rightStick"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Gamepad"",
                     ""action"": ""Look"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -184,33 +171,11 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""2df078b5-7480-4468-8db7-bc7a5da3e269"",
-                    ""path"": ""<Gamepad>/buttonSouth"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Gamepad"",
-                    ""action"": ""Jump"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""d79e8cbd-d677-4c01-906f-34b157ce3503"",
                     ""path"": ""<Mouse>/leftButton"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard & Mouse"",
-                    ""action"": ""Fire"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""3c3d7b63-1471-45c1-b9ee-618e9e8a722c"",
-                    ""path"": ""<Gamepad>/rightTrigger"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Gamepad"",
                     ""action"": ""Fire"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -228,17 +193,6 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""f0a5db8e-1368-4487-a9ad-8c0280569893"",
-                    ""path"": ""<Gamepad>/leftShoulder"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Gamepad"",
-                    ""action"": ""PrimaryWeapon"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""a28719df-e81b-40f2-8483-69cfc998e29a"",
                     ""path"": ""<Keyboard>/2"",
                     ""interactions"": """",
@@ -250,12 +204,12 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""7b0c9b12-b8ab-4eea-a911-02d2347900fd"",
-                    ""path"": ""<Gamepad>/rightShoulder"",
+                    ""id"": ""bd3ee097-94aa-48e5-b026-608d7d008803"",
+                    ""path"": ""<Keyboard>/3"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Gamepad"",
-                    ""action"": ""SecondaryWeapon"",
+                    ""groups"": ""Keyboard & Mouse"",
+                    ""action"": ""WithoutWeapon"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -278,17 +232,6 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""isOR"": false
                 }
             ]
-        },
-        {
-            ""name"": ""Gamepad"",
-            ""bindingGroup"": ""Gamepad"",
-            ""devices"": [
-                {
-                    ""devicePath"": ""<Gamepad>"",
-                    ""isOptional"": false,
-                    ""isOR"": false
-                }
-            ]
         }
     ]
 }");
@@ -300,6 +243,7 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         m_Player_Fire = m_Player.FindAction("Fire", throwIfNotFound: true);
         m_Player_PrimaryWeapon = m_Player.FindAction("PrimaryWeapon", throwIfNotFound: true);
         m_Player_SecondaryWeapon = m_Player.FindAction("SecondaryWeapon", throwIfNotFound: true);
+        m_Player_WithoutWeapon = m_Player.FindAction("WithoutWeapon", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -365,6 +309,7 @@ public partial class @Controls : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Fire;
     private readonly InputAction m_Player_PrimaryWeapon;
     private readonly InputAction m_Player_SecondaryWeapon;
+    private readonly InputAction m_Player_WithoutWeapon;
     public struct PlayerActions
     {
         private @Controls m_Wrapper;
@@ -375,6 +320,7 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         public InputAction @Fire => m_Wrapper.m_Player_Fire;
         public InputAction @PrimaryWeapon => m_Wrapper.m_Player_PrimaryWeapon;
         public InputAction @SecondaryWeapon => m_Wrapper.m_Player_SecondaryWeapon;
+        public InputAction @WithoutWeapon => m_Wrapper.m_Player_WithoutWeapon;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -402,6 +348,9 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                 @SecondaryWeapon.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSecondaryWeapon;
                 @SecondaryWeapon.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSecondaryWeapon;
                 @SecondaryWeapon.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSecondaryWeapon;
+                @WithoutWeapon.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnWithoutWeapon;
+                @WithoutWeapon.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnWithoutWeapon;
+                @WithoutWeapon.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnWithoutWeapon;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -424,6 +373,9 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                 @SecondaryWeapon.started += instance.OnSecondaryWeapon;
                 @SecondaryWeapon.performed += instance.OnSecondaryWeapon;
                 @SecondaryWeapon.canceled += instance.OnSecondaryWeapon;
+                @WithoutWeapon.started += instance.OnWithoutWeapon;
+                @WithoutWeapon.performed += instance.OnWithoutWeapon;
+                @WithoutWeapon.canceled += instance.OnWithoutWeapon;
             }
         }
     }
@@ -437,15 +389,6 @@ public partial class @Controls : IInputActionCollection2, IDisposable
             return asset.controlSchemes[m_KeyboardMouseSchemeIndex];
         }
     }
-    private int m_GamepadSchemeIndex = -1;
-    public InputControlScheme GamepadScheme
-    {
-        get
-        {
-            if (m_GamepadSchemeIndex == -1) m_GamepadSchemeIndex = asset.FindControlSchemeIndex("Gamepad");
-            return asset.controlSchemes[m_GamepadSchemeIndex];
-        }
-    }
     public interface IPlayerActions
     {
         void OnMove(InputAction.CallbackContext context);
@@ -454,5 +397,6 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         void OnFire(InputAction.CallbackContext context);
         void OnPrimaryWeapon(InputAction.CallbackContext context);
         void OnSecondaryWeapon(InputAction.CallbackContext context);
+        void OnWithoutWeapon(InputAction.CallbackContext context);
     }
 }

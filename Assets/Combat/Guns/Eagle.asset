@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbc849ca0ec20244bbe3b07386db8e78, type: 3}
   m_Name: Eagle
   m_EditorClassIdentifier: 
-  <GunModel>k__BackingField: {fileID: 0}
-  <GunName>k__BackingField: 
-  <GunDamage>k__BackingField: 0
-  <ShootingRange>k__BackingField: 100
-  <ShootingDelay>k__BackingField: 0
+  <GunModel>k__BackingField: {fileID: 5351635589495173156, guid: 97a90340462c938499164131ac8d8d0c,
+    type: 3}
+  <GunName>k__BackingField: Eagle
+  <GunDamage>k__BackingField: 20
+  <ShootingRange>k__BackingField: 40
+  <ShootingDelay>k__BackingField: 0.5

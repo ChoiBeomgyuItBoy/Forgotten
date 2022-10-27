@@ -16,7 +16,7 @@ public class PlayerFreeLookState : PlayerBaseState
     {
         Vector3 movement = CalculateMovement();
 
-        Move(movement * stateMachine.MovementSpeed, deltaTime);
+        Move(movement * stateMachine.CurrentSpeed, deltaTime);
 
         MouseRotation(stateMachine.InputReader.MouseValue, deltaTime);
     }

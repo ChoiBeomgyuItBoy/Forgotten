@@ -12,5 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbc849ca0ec20244bbe3b07386db8e78, type: 3}
   m_Name: Revolver
   m_EditorClassIdentifier: 
-  GunModel: {fileID: 0}
-  GunName: 
+  <GunModel>k__BackingField: {fileID: 5878178682608657064, guid: 87585466dd3d31f42ab13b79409c53c2,
+    type: 3}
+  <GunName>k__BackingField: Revolver
+  <GunDamage>k__BackingField: 40
+  <ShootingRange>k__BackingField: 40
+  <ShootingDelay>k__BackingField: 1

@@ -58,6 +58,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "WithoutWeapon",
+                    "type": "Button",
+                    "id": "1c289e48-db69-4f37-bc9e-883efaa460d2",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -118,33 +127,11 @@
                 },
                 {
                     "name": "",
-                    "id": "7f7a9d61-5401-4b1a-afbd-26bf40fbdedb",
-                    "path": "<Gamepad>/leftStick",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Gamepad",
-                    "action": "Move",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "5fbb59b5-6e08-4ccf-a4db-68cdfb1a85de",
                     "path": "<Mouse>/delta",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard & Mouse",
-                    "action": "Look",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "45593caa-2717-4b6b-abd5-d488672bb185",
-                    "path": "<Gamepad>/rightStick",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Gamepad",
                     "action": "Look",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -162,33 +149,11 @@
                 },
                 {
                     "name": "",
-                    "id": "2df078b5-7480-4468-8db7-bc7a5da3e269",
-                    "path": "<Gamepad>/buttonSouth",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Gamepad",
-                    "action": "Jump",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "d79e8cbd-d677-4c01-906f-34b157ce3503",
                     "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard & Mouse",
-                    "action": "Fire",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "3c3d7b63-1471-45c1-b9ee-618e9e8a722c",
-                    "path": "<Gamepad>/rightTrigger",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Gamepad",
                     "action": "Fire",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -206,17 +171,6 @@
                 },
                 {
                     "name": "",
-                    "id": "f0a5db8e-1368-4487-a9ad-8c0280569893",
-                    "path": "<Gamepad>/leftShoulder",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Gamepad",
-                    "action": "PrimaryWeapon",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "a28719df-e81b-40f2-8483-69cfc998e29a",
                     "path": "<Keyboard>/2",
                     "interactions": "",
@@ -228,12 +182,12 @@
                 },
                 {
                     "name": "",
-                    "id": "7b0c9b12-b8ab-4eea-a911-02d2347900fd",
-                    "path": "<Gamepad>/rightShoulder",
+                    "id": "bd3ee097-94aa-48e5-b026-608d7d008803",
+                    "path": "<Keyboard>/3",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Gamepad",
-                    "action": "SecondaryWeapon",
+                    "groups": "Keyboard & Mouse",
+                    "action": "WithoutWeapon",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -252,17 +206,6 @@
                 },
                 {
                     "devicePath": "<Mouse>",
-                    "isOptional": false,
-                    "isOR": false
-                }
-            ]
-        },
-        {
-            "name": "Gamepad",
-            "bindingGroup": "Gamepad",
-            "devices": [
-                {
-                    "devicePath": "<Gamepad>",
                     "isOptional": false,
                     "isOR": false
                 }
