@@ -8,6 +8,9 @@ public class InputReader : MonoBehaviour, Controls.IPlayerActions
     public Vector2 MouseValue { get; private set; }
 
     public event Action JumpEvent;
+    public event Action FireEvent;
+    public event Action PrimaryGunEvent;
+    public event Action SecondaryGunEvent;
 
     private Controls controls;
 
@@ -40,5 +43,26 @@ public class InputReader : MonoBehaviour, Controls.IPlayerActions
         if(!context.performed) { return; }
 
         JumpEvent?.Invoke();
+    }
+
+    public void OnFire(InputAction.CallbackContext context)
+    {
+        if(!context.performed) { return; }
+
+        FireEvent?.Invoke();
+    }
+
+    public void OnPrimaryWeapon(InputAction.CallbackContext context)
+    {
+        if(!context.performed) { return; }
+
+        PrimaryGunEvent?.Invoke();
+    }
+
+    public void OnSecondaryWeapon(InputAction.CallbackContext context)
+    {
+        if(!context.performed) { return; }
+
+        SecondaryGunEvent?.Invoke();
     }
 }

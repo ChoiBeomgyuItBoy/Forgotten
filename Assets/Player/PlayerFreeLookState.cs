@@ -30,7 +30,7 @@ public class PlayerFreeLookState : PlayerBaseState
     {
         stateMachine.ForceReceiver.Jump(stateMachine.JumpForce);
     }
-
+    
     private Vector3 CalculateMovement()
     {
         Vector3 xMovement = stateMachine.InputReader.MovementValue.x * stateMachine.transform.right;

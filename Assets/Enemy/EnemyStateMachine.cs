@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.AI;
 
 [RequireComponent(typeof(CharacterController), typeof(NavMeshAgent), typeof(ForceReceiver))]
-[RequireComponent(typeof(EnemyAnimationHandler))]
+[RequireComponent(typeof(EnemyAnimationHandler), typeof(Health))]
 public class EnemyStateMachine : StateMachine
 {
     [field: Header("References")]
@@ -10,7 +10,7 @@ public class EnemyStateMachine : StateMachine
     [field: SerializeField] public ForceReceiver ForceReceiver { get; private set; }
     [field: SerializeField] public NavMeshAgent Agent { get; private set; }
     [field: SerializeField] public EnemyAnimationHandler AnimationHandler { get; private set; }
-
+    [field: SerializeField] public Health Health { get; private set; }
 
     [field: Header("Values")]
     [field: SerializeField] [field: Range(0.1f, 20f)] public float MovementSpeed { get; private set; }
