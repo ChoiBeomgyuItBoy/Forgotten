@@ -882,7 +882,7 @@ MonoBehaviour:
   <ForceReceiver>k__BackingField: {fileID: 2700091715649971803}
   <Agent>k__BackingField: {fileID: 8661818427064148117}
   <AnimationHandler>k__BackingField: {fileID: 3322892625484590829}
-  <Health>k__BackingField: {fileID: 0}
+  <Health>k__BackingField: {fileID: 7874618967663138484}
   <MovementSpeed>k__BackingField: 6
   <ChaseRange>k__BackingField: 16
   <AttackRange>k__BackingField: 1.8

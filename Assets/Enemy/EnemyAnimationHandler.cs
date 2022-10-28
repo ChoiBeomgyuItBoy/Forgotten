@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[RequireComponent(typeof(Animator), typeof(EnemyAttackHandler))]
+[RequireComponent(typeof(Animator), typeof(EnemyAttackHandler), typeof(EnemyStateMachine))]
 public class EnemyAnimationHandler : AnimationHandler
 {
     [SerializeField] private Animator myAnimator;
