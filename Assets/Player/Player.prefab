@@ -273,7 +273,7 @@ MonoBehaviour:
   <Controller>k__BackingField: {fileID: 1145997911941680072}
   <ForceReceiver>k__BackingField: {fileID: 1145997911941680073}
   <MouseSensitivity>k__BackingField: 12
-  <JumpForce>k__BackingField: 4
+  <JumpForce>k__BackingField: 3
   <FreeMovementSpeed>k__BackingField: 6
 --- !u!114 &1145997911941680078
 MonoBehaviour:
@@ -310,7 +310,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5498027481072922127}
   m_Layer: 0
-  m_Name: GunPlacer
+  m_Name: GunHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

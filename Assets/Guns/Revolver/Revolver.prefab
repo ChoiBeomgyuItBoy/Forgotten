@@ -294,6 +294,8 @@ MonoBehaviour:
   <ShootVFX>k__BackingField: {fileID: 1782395880954752, guid: 3dd9cf2e209c504448f1c4c6835675cf,
     type: 3}
   <ShootVFXPlacer>k__BackingField: {fileID: 1078449562676819473}
+  <HitVFX>k__BackingField: {fileID: 8051778499957098049, guid: 0c769bb3ec683374fa5f0b109a5a2a6d,
+    type: 3}
   <AnimationHandler>k__BackingField: {fileID: 703007056601055751}
   <ShootRange>k__BackingField: 100
   <ShootDelay>k__BackingField: 0.3

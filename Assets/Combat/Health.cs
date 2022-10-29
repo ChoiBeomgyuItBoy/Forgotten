@@ -17,6 +17,6 @@ public class Health : MonoBehaviour
 
         currentHealth = Mathf.Max(currentHealth - damageAmount, 0);
 
-        Debug.Log($"{transform.name} health:{currentHealth}");
+        if(currentHealth == 0) { Destroy(gameObject); }
     }
 }

@@ -7,6 +7,7 @@ public class RevolverStateMachine : StateMachine
     [field: SerializeField] public InputReader InputReader { get; private set; }
     [field: SerializeField] public GameObject ShootVFX { get; private set; }
     [field: SerializeField] public Transform ShootVFXPlacer { get; private set; }
+    [field: SerializeField] public GameObject HitVFX { get; private set; }
     [field: SerializeField] public RevolverAnimationHandler AnimationHandler { get; private set; }
 
     [field: Header("Values")]
@@ -30,5 +31,10 @@ public class RevolverStateMachine : StateMachine
     public void PlayShootVFX()
     {
         Instantiate(ShootVFX, ShootVFXPlacer);
+    }
+
+    public void PlayHitVFX(RaycastHit hit)
+    {
+        Instantiate(HitVFX, hit.point, Quaternion.LookRotation(hit.normal));
     }
 }

@@ -6,10 +6,21 @@ public class RevolverIdleState : RevolverBaseState
 
     public override void Enter() 
     { 
+        stateMachine.AnimationHandler.TransitionToLocomotion();
         stateMachine.InputReader.FireEvent += HandleFire;
     }
 
-    public override void Tick(float deltaTime) { }
+    public override void Tick(float deltaTime) 
+    { 
+        if(stateMachine.InputReader.MovementValue == Vector2.zero)
+        {
+            stateMachine.AnimationHandler.PlayIdle(deltaTime);
+        }
+        else
+        {
+            stateMachine.AnimationHandler.PlayWalk(deltaTime);
+        }
+    }
 
     public override void Exit() 
     {

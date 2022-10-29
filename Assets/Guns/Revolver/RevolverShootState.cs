@@ -13,6 +13,7 @@ public class RevolverShootState : RevolverBaseState
     { 
         stateMachine.AnimationHandler.PlayFireAnimation();
         stateMachine.PlayShootVFX();
+
         Shoot();
     }
 
@@ -40,6 +41,8 @@ public class RevolverShootState : RevolverBaseState
         {
             health.DealDamage(stateMachine.ShootDamage);
         }
+
+        stateMachine.PlayHitVFX(hit);
     }
 
     private RaycastHit GetRayCastHit()
