@@ -1,8 +1,6 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-[RequireComponent(typeof(CharacterController), typeof(NavMeshAgent), typeof(ForceReceiver))]
-[RequireComponent(typeof(EnemyAnimationHandler), typeof(Health))]
 public class EnemyStateMachine : StateMachine
 {
     [field: Header("References")]
@@ -16,6 +14,7 @@ public class EnemyStateMachine : StateMachine
     [field: SerializeField] [field: Range(0.1f, 20f)] public float MovementSpeed { get; private set; }
     [field: SerializeField] [field: Range(0.1f, 50f)] public float ChaseRange { get; private set; }
     [field: SerializeField] [field: Range(0.1f, 20f)] public float AttackRange { get; private set; }
+    [field: SerializeField] [field: Range(0.1f, 20f)] public float RotationSpeed { get; private set; }
 
     public GameObject Player { get; private set; }
 

@@ -13,7 +13,7 @@ public class EnemyChaseState : EnemyBaseState
     {
         Move(deltaTime);
 
-        FacePlayer();
+        FacePlayer(deltaTime);
 
         MoveToPlayer(deltaTime);
 

@@ -215,6 +215,7 @@ GameObject:
   - component: {fileID: 1145997911941680079}
   - component: {fileID: 1145997911941680078}
   - component: {fileID: 1145997911941680073}
+  - component: {fileID: 3316649384807878005}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -272,9 +273,10 @@ MonoBehaviour:
   <InputReader>k__BackingField: {fileID: 1145997911941680078}
   <Controller>k__BackingField: {fileID: 1145997911941680072}
   <ForceReceiver>k__BackingField: {fileID: 1145997911941680073}
+  <Health>k__BackingField: {fileID: 3316649384807878005}
   <MouseSensitivity>k__BackingField: 12
-  <JumpForce>k__BackingField: 3
-  <FreeMovementSpeed>k__BackingField: 6
+  <JumpForce>k__BackingField: 3.5
+  <FreeMovementSpeed>k__BackingField: 4
 --- !u!114 &1145997911941680078
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -300,6 +302,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 1145997911941680072}
+--- !u!114 &3316649384807878005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1145997911941680076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 406a8b0d927da1f4b9b3021156e9d404, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHealth: 300
 --- !u!1 &7831649269325566776
 GameObject:
   m_ObjectHideFlags: 0
@@ -403,9 +418,40 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 87585466dd3d31f42ab13b79409c53c2, type: 3}
+--- !u!1 &7942144669572528686 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2231842488385348197, guid: 87585466dd3d31f42ab13b79409c53c2,
+    type: 3}
+  m_PrefabInstance: {fileID: 8124830815909894219}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1518862355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7942144669572528686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d8b2f05016763d418701eb00edd1dbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  muzzleFlashVFX: {fileID: 1782395880954752, guid: 3dd9cf2e209c504448f1c4c6835675cf,
+    type: 3}
+  hitVFX: {fileID: 8051778499957098049, guid: 0c769bb3ec683374fa5f0b109a5a2a6d, type: 3}
+  muzzle: {fileID: 9094560666080128602}
+  shootDistance: 90
+  shootDamage: 30
+  inputReader: {fileID: 1145997911941680078}
 --- !u!4 &7942144669572818446 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2231842488385191493, guid: 87585466dd3d31f42ab13b79409c53c2,
+    type: 3}
+  m_PrefabInstance: {fileID: 8124830815909894219}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &9094560666080128602 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1078449562676819473, guid: 87585466dd3d31f42ab13b79409c53c2,
     type: 3}
   m_PrefabInstance: {fileID: 8124830815909894219}
   m_PrefabAsset: {fileID: 0}

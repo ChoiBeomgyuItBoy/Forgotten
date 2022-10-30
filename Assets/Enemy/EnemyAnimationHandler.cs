@@ -1,10 +1,10 @@
 using UnityEngine;
 
-[RequireComponent(typeof(Animator), typeof(EnemyAttackHandler), typeof(EnemyStateMachine))]
 public class EnemyAnimationHandler : AnimationHandler
 {
     [SerializeField] private Animator myAnimator;
     [SerializeField] private EnemyAttackHandler attackHandler;
+    [SerializeField] private AttackDamage attackDamage;
   
     // Locomotion Blend Tree
     private const float LocomotionTransitionTime = 0.1f;
@@ -36,6 +36,8 @@ public class EnemyAnimationHandler : AnimationHandler
     {
         int randomIndex = Random.Range(0, attackHandler.Attacks.Length);
         int nameHash = Animator.StringToHash(attackHandler.Attacks[randomIndex].AnimationName);
+
+        attackDamage.SetAttack(attackHandler.Attacks[randomIndex].Damage);
 
         PlayAnimationSmoothly(myAnimator, nameHash, AttackTransitionTime);
     }

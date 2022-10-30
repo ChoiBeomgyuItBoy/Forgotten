@@ -14627,6 +14627,7 @@ GameObject:
   - component: {fileID: 8559749033521836781}
   - component: {fileID: 3950581954240564516}
   - component: {fileID: 6584873676552543817}
+  - component: {fileID: 3978526101875715332}
   m_Layer: 0
   m_Name: VFX_GunHit
   m_TagString: Untagged
@@ -19491,3 +19492,16 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &3978526101875715332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8051778499957098049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1699d66539ed364438e7643dc573c5ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToDestroy: 2

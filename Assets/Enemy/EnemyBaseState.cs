@@ -43,16 +43,19 @@ public abstract class EnemyBaseState : State
         return distanceToPlayerSqr <= attackRangeSqr;
     }   
     
-    protected void FacePlayer()
+    protected void FacePlayer(float deltaTime)
     {
         if(stateMachine.Player == null) { return; }
 
-        Vector3 myPosition = stateMachine.transform.position;
-        Vector3 playerPosition = stateMachine.Player.transform.position;
+        Vector3 direction = (stateMachine.Player.transform.position - stateMachine.transform.position).normalized;
+        direction.y = 0f;
 
-        Vector3 lookPosition = playerPosition - myPosition;
-        lookPosition.y = 0f;
+        Quaternion currentRotation = stateMachine.transform.rotation;
 
-        stateMachine.transform.rotation = Quaternion.LookRotation(lookPosition);
+        Quaternion lookRotation = Quaternion.LookRotation(direction);
+
+        float rotationSpeed = stateMachine.RotationSpeed;
+
+        stateMachine.transform.rotation = Quaternion.Slerp(currentRotation, lookRotation, rotationSpeed * deltaTime);
     }
 }

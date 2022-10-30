@@ -1,5 +1,5 @@
-Thank you for downloading the Modern Guns - Handgun package (version 1.2).
-If you enjoyed this asset, please consider trying the full version: https://assetstore.unity.com/packages/3d/props/guns/modern-guns-pack-63076
+Thank you for downloading the Modern Weapons - HandWeapon package (version 1.2).
+If you enjoyed this asset, please consider trying the full version: https://assetstore.unity.com/packages/3d/props/Weapons/modern-Weapons-pack-63076
 
 For support or any question, please contact us at Support@nokobot.com or visit Nokobot.com.
 For more of our assets, visit http://assets.nokobot.net/unity. 
@@ -10,7 +10,7 @@ Please remember to Rate and Review our assets, we really apperciate your support
 -- URP Support --
 
 This version include URP made materials and demo scene for easy use. 
-To acces these materials, go the URP folder and open the "Handgun_UPR_v1.2" file and import the associated files.
+To acces these materials, go the URP folder and open the "HandWeapon_UPR_v1.2" file and import the associated files.
 You will now have a "Materials _URP" folder with URP materials.
 
 
@@ -33,6 +33,6 @@ To make adjustments to the shooting script, please note that the callbacks for t
 
 Almost all models include Albedo, Metallic and Normal Textures.
 
-M1911 Handgun - 1479 Tris | 2048px Textures
+M1911 HandWeapon - 1479 Tris | 2048px Textures
 M1911 Magazine - 84 Tris | 1024px Textures
 45ACP Bullet - 136 Tris | 512px Textures

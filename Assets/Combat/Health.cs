@@ -17,6 +17,16 @@ public class Health : MonoBehaviour
 
         currentHealth = Mathf.Max(currentHealth - damageAmount, 0);
 
-        if(currentHealth == 0) { Destroy(gameObject); }
+        if(currentHealth <= 0)
+        {
+            if(transform.GetComponent<PlayerStateMachine>())
+            {
+                Debug.Log("Player is Dead!");
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
+        }
     }
 }

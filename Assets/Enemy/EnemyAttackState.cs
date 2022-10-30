@@ -13,7 +13,7 @@ public class EnemyAttackState : EnemyBaseState
     {
         Move(deltaTime);
 
-        FacePlayer();
+        FacePlayer(deltaTime);
         
         if(stateMachine.AnimationHandler.AnimationIsOver())
         {

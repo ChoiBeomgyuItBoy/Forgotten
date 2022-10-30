@@ -1,235 +1,647 @@
 fileFormatVersion: 2
 guid: 1c345d5c2a9b820439fe3bd81aa11b09
-timeCreated: 1508595038
-licenseType: Store
 ModelImporter:
-  serializedVersion: 18
-  fileIDToRecycleName:
-    100000: arach_armature
-    100002: arm.L
-    100004: arm.R
-    100006: bot_arm.L
-    100008: bot_arm.R
-    100010: bot_forearm.L
-    100012: bot_forearm.R
-    100014: bot_hand.L
-    100016: bot_hand.L_end
-    100018: bot_hand.R
-    100020: bot_hand.R_end
-    100022: bot_shoulder.L
-    100024: bot_shoulder.R
-    100026: fing_lit.L
-    100028: fing_lit.L_end
-    100030: fing_lit.R
-    100032: fing_lit.R_end
-    100034: fing_mid.L
-    100036: fing_mid.L_end
-    100038: fing_mid.R
-    100040: fing_mid.R_end
-    100042: fing_th.L
-    100044: fing_th.L_end
-    100046: fing_th.R
-    100048: fing_th.R_end
-    100050: forearm.L
-    100052: forearm.R
-    100054: front_leg1.L
-    100056: front_leg1.R
-    100058: front_leg2.L
-    100060: front_leg2.R
-    100062: front_leg3.L
-    100064: front_leg3.R
-    100066: front_leg4.L
-    100068: front_leg4.L_end
-    100070: front_leg4.R
-    100072: front_leg4.R_end
-    100074: hand.L
-    100076: hand.R
-    100078: head
-    100080: hip.L
-    100082: hip.R
-    100084: hip_base
-    100086: IK_bot_elbow.L
-    100088: IK_bot_elbow.L_end
-    100090: IK_bot_elbow.R
-    100092: IK_bot_elbow.R_end
-    100094: IK_bot_hand.L
-    100096: IK_bot_hand.R
-    100098: IK_elbow.L
-    100100: IK_elbow.L_end
-    100102: IK_elbow.R
-    100104: IK_elbow.R_end
-    100106: IK_front_leg.L
-    100108: IK_front_leg.R
-    100110: IK_front_leg_knee.L
-    100112: IK_front_leg_knee.L_end
-    100114: IK_front_leg_knee.R
-    100116: IK_front_leg_knee.R_end
-    100118: IK_hand.L
-    100120: IK_hand.R
-    100122: IK_rear_knee.L
-    100124: IK_rear_knee.L_end
-    100126: IK_rear_knee.R
-    100128: IK_rear_knee.R_end
-    100130: IK_rear_leg.L
-    100132: IK_rear_leg.R
-    100134: jaw.L
-    100136: jaw.L_end
-    100138: jaw.R
-    100140: jaw.R_end
-    100142: neck
-    100144: rear_hip.L
-    100146: rear_hip.R
-    100148: rear_leg1.L
-    100150: rear_leg1.R
-    100152: rear_leg2.L
-    100154: rear_leg2.R
-    100156: rear_leg3.L
-    100158: rear_leg3.R
-    100160: rear_leg4.L
-    100162: rear_leg4.L_end
-    100164: rear_leg4.R
-    100166: rear_leg4.R_end
-    100168: root
-    100170: shoulder.L
-    100172: shoulder.R
-    100174: spine_0
-    100176: spine_1
-    100178: spine_2
-    100180: //RootNode
-    100182: thc6
-    400000: arach_armature
-    400002: arm.L
-    400004: arm.R
-    400006: bot_arm.L
-    400008: bot_arm.R
-    400010: bot_forearm.L
-    400012: bot_forearm.R
-    400014: bot_hand.L
-    400016: bot_hand.L_end
-    400018: bot_hand.R
-    400020: bot_hand.R_end
-    400022: bot_shoulder.L
-    400024: bot_shoulder.R
-    400026: fing_lit.L
-    400028: fing_lit.L_end
-    400030: fing_lit.R
-    400032: fing_lit.R_end
-    400034: fing_mid.L
-    400036: fing_mid.L_end
-    400038: fing_mid.R
-    400040: fing_mid.R_end
-    400042: fing_th.L
-    400044: fing_th.L_end
-    400046: fing_th.R
-    400048: fing_th.R_end
-    400050: forearm.L
-    400052: forearm.R
-    400054: front_leg1.L
-    400056: front_leg1.R
-    400058: front_leg2.L
-    400060: front_leg2.R
-    400062: front_leg3.L
-    400064: front_leg3.R
-    400066: front_leg4.L
-    400068: front_leg4.L_end
-    400070: front_leg4.R
-    400072: front_leg4.R_end
-    400074: hand.L
-    400076: hand.R
-    400078: head
-    400080: hip.L
-    400082: hip.R
-    400084: hip_base
-    400086: IK_bot_elbow.L
-    400088: IK_bot_elbow.L_end
-    400090: IK_bot_elbow.R
-    400092: IK_bot_elbow.R_end
-    400094: IK_bot_hand.L
-    400096: IK_bot_hand.R
-    400098: IK_elbow.L
-    400100: IK_elbow.L_end
-    400102: IK_elbow.R
-    400104: IK_elbow.R_end
-    400106: IK_front_leg.L
-    400108: IK_front_leg.R
-    400110: IK_front_leg_knee.L
-    400112: IK_front_leg_knee.L_end
-    400114: IK_front_leg_knee.R
-    400116: IK_front_leg_knee.R_end
-    400118: IK_hand.L
-    400120: IK_hand.R
-    400122: IK_rear_knee.L
-    400124: IK_rear_knee.L_end
-    400126: IK_rear_knee.R
-    400128: IK_rear_knee.R_end
-    400130: IK_rear_leg.L
-    400132: IK_rear_leg.R
-    400134: jaw.L
-    400136: jaw.L_end
-    400138: jaw.R
-    400140: jaw.R_end
-    400142: neck
-    400144: rear_hip.L
-    400146: rear_hip.R
-    400148: rear_leg1.L
-    400150: rear_leg1.R
-    400152: rear_leg2.L
-    400154: rear_leg2.R
-    400156: rear_leg3.L
-    400158: rear_leg3.R
-    400160: rear_leg4.L
-    400162: rear_leg4.L_end
-    400164: rear_leg4.R
-    400166: rear_leg4.R_end
-    400168: root
-    400170: shoulder.L
-    400172: shoulder.R
-    400174: spine_0
-    400176: spine_1
-    400178: spine_2
-    400180: thc6
-    400182: //RootNode
-    4300000: thc6
-    7400000: arach_armature|attack1
-    7400002: arach_armature|attack2
-    7400004: arach_armature|attack3
-    7400006: arach_armature|death2
-    7400008: arach_armature|death_fall
-    7400010: arach_armature|hit1
-    7400012: arach_armature|hit2
-    7400014: arach_armature|howl
-    7400016: arach_armature|idle
-    7400018: arach_armature|idle_battle
-    7400020: arach_armature|jump
-    7400022: arach_armature|power_hit
-    7400024: arach_armature|rising
-    7400026: arach_armature|run
-    7400028: arach_armature|walk
-    9500000: //RootNode
-    13700000: thc6
+  serializedVersion: 22103
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: arach_armature
+  - first:
+      1: 100002
+    second: arm.L
+  - first:
+      1: 100004
+    second: arm.R
+  - first:
+      1: 100006
+    second: bot_arm.L
+  - first:
+      1: 100008
+    second: bot_arm.R
+  - first:
+      1: 100010
+    second: bot_forearm.L
+  - first:
+      1: 100012
+    second: bot_forearm.R
+  - first:
+      1: 100014
+    second: bot_hand.L
+  - first:
+      1: 100016
+    second: bot_hand.L_end
+  - first:
+      1: 100018
+    second: bot_hand.R
+  - first:
+      1: 100020
+    second: bot_hand.R_end
+  - first:
+      1: 100022
+    second: bot_shoulder.L
+  - first:
+      1: 100024
+    second: bot_shoulder.R
+  - first:
+      1: 100026
+    second: fing_lit.L
+  - first:
+      1: 100028
+    second: fing_lit.L_end
+  - first:
+      1: 100030
+    second: fing_lit.R
+  - first:
+      1: 100032
+    second: fing_lit.R_end
+  - first:
+      1: 100034
+    second: fing_mid.L
+  - first:
+      1: 100036
+    second: fing_mid.L_end
+  - first:
+      1: 100038
+    second: fing_mid.R
+  - first:
+      1: 100040
+    second: fing_mid.R_end
+  - first:
+      1: 100042
+    second: fing_th.L
+  - first:
+      1: 100044
+    second: fing_th.L_end
+  - first:
+      1: 100046
+    second: fing_th.R
+  - first:
+      1: 100048
+    second: fing_th.R_end
+  - first:
+      1: 100050
+    second: forearm.L
+  - first:
+      1: 100052
+    second: forearm.R
+  - first:
+      1: 100054
+    second: front_leg1.L
+  - first:
+      1: 100056
+    second: front_leg1.R
+  - first:
+      1: 100058
+    second: front_leg2.L
+  - first:
+      1: 100060
+    second: front_leg2.R
+  - first:
+      1: 100062
+    second: front_leg3.L
+  - first:
+      1: 100064
+    second: front_leg3.R
+  - first:
+      1: 100066
+    second: front_leg4.L
+  - first:
+      1: 100068
+    second: front_leg4.L_end
+  - first:
+      1: 100070
+    second: front_leg4.R
+  - first:
+      1: 100072
+    second: front_leg4.R_end
+  - first:
+      1: 100074
+    second: hand.L
+  - first:
+      1: 100076
+    second: hand.R
+  - first:
+      1: 100078
+    second: head
+  - first:
+      1: 100080
+    second: hip.L
+  - first:
+      1: 100082
+    second: hip.R
+  - first:
+      1: 100084
+    second: hip_base
+  - first:
+      1: 100086
+    second: IK_bot_elbow.L
+  - first:
+      1: 100088
+    second: IK_bot_elbow.L_end
+  - first:
+      1: 100090
+    second: IK_bot_elbow.R
+  - first:
+      1: 100092
+    second: IK_bot_elbow.R_end
+  - first:
+      1: 100094
+    second: IK_bot_hand.L
+  - first:
+      1: 100096
+    second: IK_bot_hand.R
+  - first:
+      1: 100098
+    second: IK_elbow.L
+  - first:
+      1: 100100
+    second: IK_elbow.L_end
+  - first:
+      1: 100102
+    second: IK_elbow.R
+  - first:
+      1: 100104
+    second: IK_elbow.R_end
+  - first:
+      1: 100106
+    second: IK_front_leg.L
+  - first:
+      1: 100108
+    second: IK_front_leg.R
+  - first:
+      1: 100110
+    second: IK_front_leg_knee.L
+  - first:
+      1: 100112
+    second: IK_front_leg_knee.L_end
+  - first:
+      1: 100114
+    second: IK_front_leg_knee.R
+  - first:
+      1: 100116
+    second: IK_front_leg_knee.R_end
+  - first:
+      1: 100118
+    second: IK_hand.L
+  - first:
+      1: 100120
+    second: IK_hand.R
+  - first:
+      1: 100122
+    second: IK_rear_knee.L
+  - first:
+      1: 100124
+    second: IK_rear_knee.L_end
+  - first:
+      1: 100126
+    second: IK_rear_knee.R
+  - first:
+      1: 100128
+    second: IK_rear_knee.R_end
+  - first:
+      1: 100130
+    second: IK_rear_leg.L
+  - first:
+      1: 100132
+    second: IK_rear_leg.R
+  - first:
+      1: 100134
+    second: jaw.L
+  - first:
+      1: 100136
+    second: jaw.L_end
+  - first:
+      1: 100138
+    second: jaw.R
+  - first:
+      1: 100140
+    second: jaw.R_end
+  - first:
+      1: 100142
+    second: neck
+  - first:
+      1: 100144
+    second: rear_hip.L
+  - first:
+      1: 100146
+    second: rear_hip.R
+  - first:
+      1: 100148
+    second: rear_leg1.L
+  - first:
+      1: 100150
+    second: rear_leg1.R
+  - first:
+      1: 100152
+    second: rear_leg2.L
+  - first:
+      1: 100154
+    second: rear_leg2.R
+  - first:
+      1: 100156
+    second: rear_leg3.L
+  - first:
+      1: 100158
+    second: rear_leg3.R
+  - first:
+      1: 100160
+    second: rear_leg4.L
+  - first:
+      1: 100162
+    second: rear_leg4.L_end
+  - first:
+      1: 100164
+    second: rear_leg4.R
+  - first:
+      1: 100166
+    second: rear_leg4.R_end
+  - first:
+      1: 100168
+    second: root
+  - first:
+      1: 100170
+    second: shoulder.L
+  - first:
+      1: 100172
+    second: shoulder.R
+  - first:
+      1: 100174
+    second: spine_0
+  - first:
+      1: 100176
+    second: spine_1
+  - first:
+      1: 100178
+    second: spine_2
+  - first:
+      1: 100180
+    second: //RootNode
+  - first:
+      1: 100182
+    second: thc6
+  - first:
+      4: 400000
+    second: arach_armature
+  - first:
+      4: 400002
+    second: arm.L
+  - first:
+      4: 400004
+    second: arm.R
+  - first:
+      4: 400006
+    second: bot_arm.L
+  - first:
+      4: 400008
+    second: bot_arm.R
+  - first:
+      4: 400010
+    second: bot_forearm.L
+  - first:
+      4: 400012
+    second: bot_forearm.R
+  - first:
+      4: 400014
+    second: bot_hand.L
+  - first:
+      4: 400016
+    second: bot_hand.L_end
+  - first:
+      4: 400018
+    second: bot_hand.R
+  - first:
+      4: 400020
+    second: bot_hand.R_end
+  - first:
+      4: 400022
+    second: bot_shoulder.L
+  - first:
+      4: 400024
+    second: bot_shoulder.R
+  - first:
+      4: 400026
+    second: fing_lit.L
+  - first:
+      4: 400028
+    second: fing_lit.L_end
+  - first:
+      4: 400030
+    second: fing_lit.R
+  - first:
+      4: 400032
+    second: fing_lit.R_end
+  - first:
+      4: 400034
+    second: fing_mid.L
+  - first:
+      4: 400036
+    second: fing_mid.L_end
+  - first:
+      4: 400038
+    second: fing_mid.R
+  - first:
+      4: 400040
+    second: fing_mid.R_end
+  - first:
+      4: 400042
+    second: fing_th.L
+  - first:
+      4: 400044
+    second: fing_th.L_end
+  - first:
+      4: 400046
+    second: fing_th.R
+  - first:
+      4: 400048
+    second: fing_th.R_end
+  - first:
+      4: 400050
+    second: forearm.L
+  - first:
+      4: 400052
+    second: forearm.R
+  - first:
+      4: 400054
+    second: front_leg1.L
+  - first:
+      4: 400056
+    second: front_leg1.R
+  - first:
+      4: 400058
+    second: front_leg2.L
+  - first:
+      4: 400060
+    second: front_leg2.R
+  - first:
+      4: 400062
+    second: front_leg3.L
+  - first:
+      4: 400064
+    second: front_leg3.R
+  - first:
+      4: 400066
+    second: front_leg4.L
+  - first:
+      4: 400068
+    second: front_leg4.L_end
+  - first:
+      4: 400070
+    second: front_leg4.R
+  - first:
+      4: 400072
+    second: front_leg4.R_end
+  - first:
+      4: 400074
+    second: hand.L
+  - first:
+      4: 400076
+    second: hand.R
+  - first:
+      4: 400078
+    second: head
+  - first:
+      4: 400080
+    second: hip.L
+  - first:
+      4: 400082
+    second: hip.R
+  - first:
+      4: 400084
+    second: hip_base
+  - first:
+      4: 400086
+    second: IK_bot_elbow.L
+  - first:
+      4: 400088
+    second: IK_bot_elbow.L_end
+  - first:
+      4: 400090
+    second: IK_bot_elbow.R
+  - first:
+      4: 400092
+    second: IK_bot_elbow.R_end
+  - first:
+      4: 400094
+    second: IK_bot_hand.L
+  - first:
+      4: 400096
+    second: IK_bot_hand.R
+  - first:
+      4: 400098
+    second: IK_elbow.L
+  - first:
+      4: 400100
+    second: IK_elbow.L_end
+  - first:
+      4: 400102
+    second: IK_elbow.R
+  - first:
+      4: 400104
+    second: IK_elbow.R_end
+  - first:
+      4: 400106
+    second: IK_front_leg.L
+  - first:
+      4: 400108
+    second: IK_front_leg.R
+  - first:
+      4: 400110
+    second: IK_front_leg_knee.L
+  - first:
+      4: 400112
+    second: IK_front_leg_knee.L_end
+  - first:
+      4: 400114
+    second: IK_front_leg_knee.R
+  - first:
+      4: 400116
+    second: IK_front_leg_knee.R_end
+  - first:
+      4: 400118
+    second: IK_hand.L
+  - first:
+      4: 400120
+    second: IK_hand.R
+  - first:
+      4: 400122
+    second: IK_rear_knee.L
+  - first:
+      4: 400124
+    second: IK_rear_knee.L_end
+  - first:
+      4: 400126
+    second: IK_rear_knee.R
+  - first:
+      4: 400128
+    second: IK_rear_knee.R_end
+  - first:
+      4: 400130
+    second: IK_rear_leg.L
+  - first:
+      4: 400132
+    second: IK_rear_leg.R
+  - first:
+      4: 400134
+    second: jaw.L
+  - first:
+      4: 400136
+    second: jaw.L_end
+  - first:
+      4: 400138
+    second: jaw.R
+  - first:
+      4: 400140
+    second: jaw.R_end
+  - first:
+      4: 400142
+    second: neck
+  - first:
+      4: 400144
+    second: rear_hip.L
+  - first:
+      4: 400146
+    second: rear_hip.R
+  - first:
+      4: 400148
+    second: rear_leg1.L
+  - first:
+      4: 400150
+    second: rear_leg1.R
+  - first:
+      4: 400152
+    second: rear_leg2.L
+  - first:
+      4: 400154
+    second: rear_leg2.R
+  - first:
+      4: 400156
+    second: rear_leg3.L
+  - first:
+      4: 400158
+    second: rear_leg3.R
+  - first:
+      4: 400160
+    second: rear_leg4.L
+  - first:
+      4: 400162
+    second: rear_leg4.L_end
+  - first:
+      4: 400164
+    second: rear_leg4.R
+  - first:
+      4: 400166
+    second: rear_leg4.R_end
+  - first:
+      4: 400168
+    second: root
+  - first:
+      4: 400170
+    second: shoulder.L
+  - first:
+      4: 400172
+    second: shoulder.R
+  - first:
+      4: 400174
+    second: spine_0
+  - first:
+      4: 400176
+    second: spine_1
+  - first:
+      4: 400178
+    second: spine_2
+  - first:
+      4: 400180
+    second: thc6
+  - first:
+      4: 400182
+    second: //RootNode
+  - first:
+      43: 4300000
+    second: thc6
+  - first:
+      74: 7400000
+    second: arach_armature|attack1
+  - first:
+      74: 7400002
+    second: arach_armature|attack2
+  - first:
+      74: 7400004
+    second: arach_armature|attack3
+  - first:
+      74: 7400006
+    second: arach_armature|death2
+  - first:
+      74: 7400008
+    second: arach_armature|death_fall
+  - first:
+      74: 7400010
+    second: arach_armature|hit1
+  - first:
+      74: 7400012
+    second: arach_armature|hit2
+  - first:
+      74: 7400014
+    second: arach_armature|howl
+  - first:
+      74: 7400016
+    second: arach_armature|idle
+  - first:
+      74: 7400018
+    second: arach_armature|idle_battle
+  - first:
+      74: 7400020
+    second: arach_armature|jump
+  - first:
+      74: 7400022
+    second: arach_armature|power_hit
+  - first:
+      74: 7400024
+    second: arach_armature|rising
+  - first:
+      74: 7400026
+    second: arach_armature|run
+  - first:
+      74: 7400028
+    second: arach_armature|walk
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: thc6
+  externalObjects: {}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
+    resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
     motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
-    animationRotationError: .5
-    animationPositionError: .5
-    animationScaleError: .5
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
+    extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
       name: arach_armature|attack1
       takeName: arach_armature|attack1
+      internalID: 0
       firstFrame: 0
       lastFrame: 31
       wrapMode: 0
@@ -237,6 +649,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
@@ -437,9 +850,11 @@ ModelImporter:
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: arach_armature|attack2
       takeName: arach_armature|attack2
+      internalID: 0
       firstFrame: 0
       lastFrame: 31
       wrapMode: 0
@@ -447,6 +862,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
@@ -647,9 +1063,11 @@ ModelImporter:
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: arach_armature|attack3
       takeName: arach_armature|attack3
+      internalID: 0
       firstFrame: 0
       lastFrame: 39
       wrapMode: 0
@@ -657,6 +1075,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
@@ -857,9 +1276,11 @@ ModelImporter:
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: arach_armature|death2
       takeName: arach_armature|death2
+      internalID: 0
       firstFrame: 0
       lastFrame: 66
       wrapMode: 0
@@ -867,6 +1288,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
@@ -1067,9 +1489,11 @@ ModelImporter:
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: arach_armature|death_fall
       takeName: arach_armature|death_fall
+      internalID: 0
       firstFrame: 0
       lastFrame: 41
       wrapMode: 0
@@ -1077,6 +1501,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
@@ -1277,9 +1702,11 @@ ModelImporter:
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: arach_armature|hit1
       takeName: arach_armature|hit1
+      internalID: 0
       firstFrame: 0
       lastFrame: 11
       wrapMode: 0
@@ -1287,6 +1714,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
@@ -1487,9 +1915,11 @@ ModelImporter:
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: arach_armature|hit2
       takeName: arach_armature|hit2
+      internalID: 0
       firstFrame: 0
       lastFrame: 11
       wrapMode: 0
@@ -1497,6 +1927,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
@@ -1697,9 +2128,11 @@ ModelImporter:
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: arach_armature|howl
       takeName: arach_armature|howl
+      internalID: 0
       firstFrame: 0
       lastFrame: 59
       wrapMode: 0
@@ -1707,6 +2140,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
@@ -1907,9 +2341,11 @@ ModelImporter:
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: arach_armature|idle
       takeName: arach_armature|idle
+      internalID: 0
       firstFrame: 0
       lastFrame: 89
       wrapMode: 0
@@ -1917,6 +2353,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 1
       loopBlend: 1
       loopBlendOrientation: 0
@@ -2117,9 +2554,11 @@ ModelImporter:
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: arach_armature|idle_battle
       takeName: arach_armature|idle_battle
+      internalID: 0
       firstFrame: 0
       lastFrame: 49
       wrapMode: 0
@@ -2127,6 +2566,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 1
       loopBlend: 1
       loopBlendOrientation: 0
@@ -2327,9 +2767,11 @@ ModelImporter:
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: arach_armature|jump
       takeName: arach_armature|jump
+      internalID: 0
       firstFrame: 0
       lastFrame: 39
       wrapMode: 0
@@ -2337,6 +2779,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
@@ -2537,9 +2980,11 @@ ModelImporter:
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: arach_armature|power_hit
       takeName: arach_armature|power_hit
+      internalID: 0
       firstFrame: 0
       lastFrame: 39
       wrapMode: 0
@@ -2547,6 +2992,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
@@ -2747,9 +3193,11 @@ ModelImporter:
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: arach_armature|rising
       takeName: arach_armature|rising
+      internalID: 0
       firstFrame: 0
       lastFrame: 79
       wrapMode: 0
@@ -2757,6 +3205,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
@@ -2957,9 +3406,11 @@ ModelImporter:
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: arach_armature|run
       takeName: arach_armature|run
+      internalID: 0
       firstFrame: 0
       lastFrame: 23
       wrapMode: 0
@@ -2967,6 +3418,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 1
       loopBlend: 1
       loopBlendOrientation: 0
@@ -3167,9 +3619,11 @@ ModelImporter:
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: arach_armature|walk
       takeName: arach_armature|walk
+      internalID: 0
       firstFrame: 0
       lastFrame: 31
       wrapMode: 0
@@ -3177,6 +3631,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 1
       loopBlend: 1
       loopBlendOrientation: 0
@@ -3377,44 +3832,77 @@ ModelImporter:
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 0
     importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
+    strictVertexDataChecks: 0
   tangentSpace:
     normalSmoothAngle: 60
-    splitTangentsAcrossUV: 1
     normalImportMode: 0
-    tangentImportMode: 1
+    tangentImportMode: 4
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
+    serializedVersion: 3
     human: []
     skeleton: []
-    armTwist: .5
-    foreArmTwist: .5
-    upperLegTwist: .5
-    legTwist: .5
-    armStretch: .0500000007
-    legStretch: .0500000007
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  importBlendShapeDeformPercent: 0
+  remapMaterialsIfMaterialImportModeIsNone: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

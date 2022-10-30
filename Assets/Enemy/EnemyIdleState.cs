@@ -14,7 +14,7 @@ public class EnemyIdleState : EnemyBaseState
     {
         Move(deltaTime);
 
-        FacePlayer();
+        FacePlayer(deltaTime);
 
         if(IsInChaseRange())
         {

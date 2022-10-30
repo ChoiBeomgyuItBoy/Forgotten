@@ -9,8 +9,8 @@ public class InputReader : MonoBehaviour, Controls.IPlayerActions
 
     public event Action JumpEvent;
     public event Action FireEvent;
-    public event Action PrimaryGunEvent;
-    public event Action SecondaryGunEvent;
+    public event Action PrimaryWeaponEvent;
+    public event Action SecondaryWeaponEvent;
     public event Action WithoutWeaponEvent;
 
     private Controls controls;
@@ -57,14 +57,14 @@ public class InputReader : MonoBehaviour, Controls.IPlayerActions
     {
         if(!context.performed) { return; }
 
-        PrimaryGunEvent?.Invoke();
+        PrimaryWeaponEvent?.Invoke();
     }
 
     public void OnSecondaryWeapon(InputAction.CallbackContext context)
     {
         if(!context.performed) { return; }
 
-        SecondaryGunEvent?.Invoke();
+        SecondaryWeaponEvent?.Invoke();
     }
 
     public void OnWithoutWeapon(InputAction.CallbackContext context)
