@@ -19,6 +19,8 @@ public abstract class EnemyBaseState : State
         Vector3 gravity = stateMachine.ForceReceiver.Movement;
         
         stateMachine.Controller.Move((motion + gravity) * deltaTime);
+
+        stateMachine.Agent.velocity = stateMachine.Controller.velocity;
     }
 
     protected bool IsInChaseRange()

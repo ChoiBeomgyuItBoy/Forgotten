@@ -51,7 +51,5 @@ public class EnemyChaseState : EnemyBaseState
         Vector3 myVelocity = navMeshVelocity * stateMachine.MovementSpeed;
 
         Move(myVelocity, deltaTime);
-
-        stateMachine.Agent.velocity = stateMachine.Controller.velocity;
     }
 }

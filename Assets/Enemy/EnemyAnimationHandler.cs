@@ -4,7 +4,8 @@ public class EnemyAnimationHandler : AnimationHandler
 {
     [SerializeField] private Animator myAnimator;
     [SerializeField] private EnemyAttackHandler attackHandler;
-    [SerializeField] private AttackDamage attackDamage;
+    [SerializeField] private AttackDamage attackDamage1;
+    [SerializeField] private AttackDamage attackDamage2;
   
     private readonly int LocomotionSpeedHash = Animator.StringToHash("Speed");
     private readonly int LocomotionBlendTreeHash = Animator.StringToHash("Locomotion");
@@ -36,7 +37,8 @@ public class EnemyAnimationHandler : AnimationHandler
         int randomIndex = Random.Range(0, attackHandler.Attacks.Length);
         int nameHash = Animator.StringToHash(attackHandler.Attacks[randomIndex].AnimationName);
 
-        attackDamage.SetAttack(attackHandler.Attacks[randomIndex].Damage);
+        attackDamage1.SetAttack(attackHandler.Attacks[randomIndex].Damage);
+        attackDamage2.SetAttack(attackHandler.Attacks[randomIndex].Damage);
 
         PlayAnimationSmoothly(myAnimator, nameHash, animationDampTime);
     }

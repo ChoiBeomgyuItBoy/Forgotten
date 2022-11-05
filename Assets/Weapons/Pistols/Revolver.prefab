@@ -177,6 +177,8 @@ GameObject:
   - component: {fileID: 2231842488385191493}
   - component: {fileID: 2231842488386518629}
   - component: {fileID: 2231842488387615909}
+  - component: {fileID: 1518862355}
+  - component: {fileID: 1382630929728593104}
   m_Layer: 0
   m_Name: Revolver
   m_TagString: Untagged
@@ -202,7 +204,7 @@ Transform:
   - {fileID: 2231842488385191497}
   - {fileID: 1078449562676819473}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2231842488386518629
 MeshFilter:
@@ -254,6 +256,39 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1518862355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2231842488385348197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d8b2f05016763d418701eb00edd1dbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: {fileID: 0}
+  muzzleFlashVFX: {fileID: 1782395880954752, guid: 3dd9cf2e209c504448f1c4c6835675cf,
+    type: 3}
+  hitVFX: {fileID: 8051778499957098049, guid: 0c769bb3ec683374fa5f0b109a5a2a6d, type: 3}
+  muzzle: {fileID: 1078449562676819473}
+  inputReader: {fileID: 0}
+  shootDistance: 90
+  shootDamage: 20
+--- !u!65 &1382630929728593104
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2231842488385348197}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.020512495, y: 0.14453869, z: 0.23614983}
+  m_Center: {x: 0.000000006829699, y: 0.04349033, z: 0.080673955}
 --- !u!1 &2231842488385348199
 GameObject:
   m_ObjectHideFlags: 0
