@@ -15,7 +15,7 @@ public class EnemyAttackState : EnemyBaseState
 
         FacePlayer(deltaTime);
         
-        if(stateMachine.AnimationHandler.AnimationIsOver())
+        if(stateMachine.AnimationHandler.AnimationIsOver("Attack"))
         {
             stateMachine.SwitchState(new EnemyChaseState(stateMachine));
         }

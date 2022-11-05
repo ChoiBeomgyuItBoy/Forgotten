@@ -7,7 +7,7 @@ public class AttackDamage : MonoBehaviour
     
     private List<Collider> alreadyCollidedWith = new List<Collider>();
 
-    private int damage;
+    private float damage;
 
     private void OnEnable()
     {
@@ -22,13 +22,13 @@ public class AttackDamage : MonoBehaviour
 
         alreadyCollidedWith.Add(other);
 
-        if(other.TryGetComponent<Health>(out Health health))
+        if(other.TryGetComponent<PlayerHealth>(out PlayerHealth health))
         {
-            health.DealDamage(damage);
+            health.TakeDamage(damage);
         }
     }
 
-    public void SetAttack(int damage)
+    public void SetAttack(float damage)
     {
         this.damage = damage;
     }

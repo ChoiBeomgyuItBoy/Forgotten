@@ -6,31 +6,30 @@ public class EnemyAnimationHandler : AnimationHandler
     [SerializeField] private EnemyAttackHandler attackHandler;
     [SerializeField] private AttackDamage attackDamage;
   
-    // Locomotion Blend Tree
-    private const float LocomotionTransitionTime = 0.1f;
-    private const float IdleDampTime = 0.1f;
-    private const float IdleBlendValue = 0f;
-    private const float RunBlendValue  = 1f;
-    private readonly int LocomotionBlendTreeHash = Animator.StringToHash("Locomotion");
     private readonly int LocomotionSpeedHash = Animator.StringToHash("Speed");
+    private readonly int LocomotionBlendTreeHash = Animator.StringToHash("Locomotion");
+    private readonly int DeathHash = Animator.StringToHash("Enemy_Death");
 
-    // Attack
-    private const float AttackTransitionTime = 0.1f;
+    private const float animationDampTime = 0.1f;
+
+    // LOCOMOTION
 
     public void TransitionToLocomotion()
     {
-        PlayAnimationSmoothly(myAnimator, LocomotionBlendTreeHash, LocomotionTransitionTime);
+        PlayAnimationSmoothly(myAnimator, LocomotionBlendTreeHash, animationDampTime);
     }
 
     public void PlayIdle(float deltaTime)
     {
-        SetBlendTreeValue(myAnimator, LocomotionSpeedHash, IdleBlendValue, IdleDampTime, deltaTime);
+        SetBlendTreeValue(myAnimator, LocomotionSpeedHash, 0, animationDampTime, deltaTime);
     }
 
     public void PlayRun(float deltaTime)
     {
-        SetBlendTreeValue(myAnimator, LocomotionSpeedHash, RunBlendValue, IdleDampTime, deltaTime);
+        SetBlendTreeValue(myAnimator, LocomotionSpeedHash, 1, animationDampTime, deltaTime);
     }
+
+    // COMBAT
 
     public void PlayRandomAttack()
     {
@@ -39,12 +38,19 @@ public class EnemyAnimationHandler : AnimationHandler
 
         attackDamage.SetAttack(attackHandler.Attacks[randomIndex].Damage);
 
-        PlayAnimationSmoothly(myAnimator, nameHash, AttackTransitionTime);
+        PlayAnimationSmoothly(myAnimator, nameHash, animationDampTime);
     }
 
-    public bool AnimationIsOver()
+    public void PlayDead()
     {
-        if(GetNormalizedTime(myAnimator) >= 1f) 
+        PlayAnimationSmoothly(myAnimator, DeathHash, animationDampTime);
+    }
+
+    // TOOLS
+
+    public bool AnimationIsOver(string animationTag)
+    {
+        if(GetNormalizedTime(myAnimator,animationTag) > 1f) 
         { 
             return true; 
         }

@@ -8,7 +8,7 @@ public class EnemyStateMachine : StateMachine
     [field: SerializeField] public ForceReceiver ForceReceiver { get; private set; }
     [field: SerializeField] public NavMeshAgent Agent { get; private set; }
     [field: SerializeField] public EnemyAnimationHandler AnimationHandler { get; private set; }
-    [field: SerializeField] public Health Health { get; private set; }
+    [field: SerializeField] public EnemyHealth EnemyHealth { get; private set; }
 
     [field: Header("Values")]
     [field: SerializeField] [field: Range(0.1f, 20f)] public float MovementSpeed { get; private set; }
@@ -16,16 +16,33 @@ public class EnemyStateMachine : StateMachine
     [field: SerializeField] [field: Range(0.1f, 20f)] public float AttackRange { get; private set; }
     [field: SerializeField] [field: Range(0.1f, 20f)] public float RotationSpeed { get; private set; }
 
-    public GameObject Player { get; private set; }
+    public PlayerHealth Player { get; private set; }
 
     private void Start()
     {
-        Player = GameObject.FindGameObjectWithTag("Player");
+        EnemyHealth.onEnemyDead += HandleDeath;
+
+        Player = FindObjectOfType<PlayerHealth>();
 
         Agent.updatePosition = false;
         Agent.updateRotation = false;
 
         SwitchState(new EnemyIdleState(this));
+    }
+
+    private void OnDisable()
+    {
+        EnemyHealth.onEnemyDead -= HandleDeath;
+    }
+
+    private void HandleDeath()
+    {
+        SwitchState(new EnemyDeadState(this));
+    }
+
+    public void DestroyMyself()
+    {
+        Destroy(gameObject);
     }
 
     private void OnDrawGizmosSelected()
@@ -36,7 +53,12 @@ public class EnemyStateMachine : StateMachine
 
         // Attack Range Gizmos
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, AttackRange);
+
+        Vector3 myPosition = transform.position;
+
+        myPosition.y = myPosition.y + 1;
+
+        Gizmos.DrawWireSphere(myPosition, AttackRange);
     }
 
 }

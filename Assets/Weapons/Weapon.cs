@@ -1,25 +1,31 @@
+using System;
+using System.Collections;
 using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
+    [SerializeField] private PlayerHealth playerHealth;
     [SerializeField] private GameObject muzzleFlashVFX;
     [SerializeField] private GameObject hitVFX;
     [SerializeField] private Transform muzzle;
-    [SerializeField] private float shootDistance;
-    [SerializeField] private int shootDamage;
     [SerializeField] private InputReader inputReader;
+    [SerializeField] private float shootDistance;
+    [SerializeField] private float shootDamage;
 
     private Transform mainCameraTransform;
 
     private void Start()
     {
         inputReader.FireEvent += HandleFire;
+        playerHealth.onPlayerDead += HandePlayerDead;
+
         mainCameraTransform = Camera.main.transform;
     }
 
     private void OnDisable()
     {
         inputReader.FireEvent -= HandleFire;
+        playerHealth.onPlayerDead -= HandePlayerDead;
     }
 
     private void HandleFire()
@@ -32,9 +38,9 @@ public class Weapon : MonoBehaviour
 
         if(hit.transform.GetComponent<PlayerStateMachine>()) { return; }
         
-        if(hit.transform.TryGetComponent<Health>(out Health health))
+        if(hit.transform.TryGetComponent<EnemyHealth>(out EnemyHealth health))
         {
-            health.DealDamage(shootDamage);
+            health.TakeDamage(shootDamage);
         }
 
         PlayHitVFX(hit);
@@ -62,4 +68,10 @@ public class Weapon : MonoBehaviour
 
         return hit;
     }
+
+    private void HandePlayerDead()
+    {
+        Destroy(this);
+    }
+
 }

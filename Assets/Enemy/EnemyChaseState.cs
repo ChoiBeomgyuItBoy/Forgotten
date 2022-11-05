@@ -17,13 +17,13 @@ public class EnemyChaseState : EnemyBaseState
 
         MoveToPlayer(deltaTime);
 
-        if(!IsInChaseRange())
-        {
-            stateMachine.SwitchState(new EnemyIdleState(stateMachine));
-            return;
-        }
+        // if(!IsInChaseRange())
+        // {
+        //     stateMachine.SwitchState(new EnemyIdleState(stateMachine));
+        //     return;
+        // }
 
-        else if(IsInAttackRange())
+        if(IsInAttackRange())
         {
             stateMachine.SwitchState(new EnemyAttackState(stateMachine));
             return;

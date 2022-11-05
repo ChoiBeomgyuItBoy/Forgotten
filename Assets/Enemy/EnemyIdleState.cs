@@ -7,6 +7,7 @@ public class EnemyIdleState : EnemyBaseState
 
     public override void Enter() 
     { 
+        stateMachine.EnemyHealth.onDamageTaken += HandleDamageTaken;
         stateMachine.AnimationHandler.TransitionToLocomotion();
     }
 
@@ -25,5 +26,13 @@ public class EnemyIdleState : EnemyBaseState
         stateMachine.AnimationHandler.PlayIdle(deltaTime);
     }
 
-    public override void Exit() { }
+    public override void Exit() 
+    { 
+        stateMachine.EnemyHealth.onDamageTaken -= HandleDamageTaken;
+    }
+
+    private void HandleDamageTaken()
+    {
+        stateMachine.SwitchState(new EnemyChaseState(stateMachine));
+    }
 }

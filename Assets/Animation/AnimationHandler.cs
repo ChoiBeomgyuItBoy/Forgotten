@@ -12,10 +12,20 @@ public abstract class AnimationHandler : MonoBehaviour
         animator.SetFloat(nameHash, value, dampTime, deltaTime);
     }
 
-    protected float GetNormalizedTime(Animator animator)
+    protected float GetNormalizedTime(Animator animator, string tag)
     {
-        if(animator.IsInTransition(0)) { return 0f; }
+        AnimatorStateInfo currentAnimation = animator.GetCurrentAnimatorStateInfo(0);
 
-        return animator.GetCurrentAnimatorStateInfo(0).normalizedTime;
+        if(animator.IsInTransition(0)) 
+        { 
+            return 0f; 
+        }
+
+        else if(!animator.IsInTransition(0) && currentAnimation.IsTag(tag))
+        {
+            return animator.GetCurrentAnimatorStateInfo(0).normalizedTime;  
+        }
+
+        return 0f;
     }
 }
