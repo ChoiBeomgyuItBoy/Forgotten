@@ -1,0 +1,37 @@
+using UnityEngine;
+
+public class WeaponZoom : MonoBehaviour
+{
+    [SerializeField] private InputReader inputReader;
+    [SerializeField] private float weaponZoomIn = 20f;
+    [SerializeField] private float weaponZoomOut = 40f;
+
+    private Camera mainCamera;
+
+    private void OnEnable()
+    {
+        inputReader.ADSEvent += HandleADS;
+        inputReader.ADSCancelEvent += HandleADSCancel;
+    }
+
+    private void Start()
+    {
+        mainCamera = Camera.main;
+    }
+
+    private void OnDisable()
+    {
+        inputReader.ADSEvent -= HandleADS;
+        inputReader.ADSCancelEvent -= HandleADSCancel;
+    }
+
+    private void HandleADS()
+    {
+        mainCamera.fieldOfView = weaponZoomIn;
+    }
+
+    private void HandleADSCancel()
+    {
+        mainCamera.fieldOfView = weaponZoomOut;
+    }
+}

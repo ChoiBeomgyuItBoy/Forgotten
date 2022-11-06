@@ -42,28 +42,46 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "PrimaryWeapon",
+                    "name": "ADS",
                     "type": "Button",
-                    "id": "63ffba0e-c6b0-466f-8b9a-4e2c1e4e882e",
+                    "id": "553a9cff-18ae-4191-9a39-02b6c66c610c",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
                 },
                 {
-                    "name": "SecondaryWeapon",
+                    "name": "FirstSlot",
                     "type": "Button",
-                    "id": "27b39dab-33ef-44c0-a131-ee037d2db53c",
+                    "id": "aae65015-99b4-4868-af2e-5a451a7420c2",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
                 },
                 {
-                    "name": "WithoutWeapon",
+                    "name": "SecondSlot",
                     "type": "Button",
-                    "id": "1c289e48-db69-4f37-bc9e-883efaa460d2",
+                    "id": "68b018ed-20d6-4b21-8ccf-6b0847370660",
                     "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "ThirdSlot",
+                    "type": "Button",
+                    "id": "6a5fa347-40ec-494e-9df1-3d8d30577a1c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "MouseWheel",
+                    "type": "PassThrough",
+                    "id": "c793f35b-1ef6-4445-a115-516b6147b45e",
+                    "expectedControlType": "Axis",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -160,34 +178,56 @@
                 },
                 {
                     "name": "",
-                    "id": "8968393f-e392-45f3-9b25-1ae1339cca51",
+                    "id": "e088baa5-7352-4f7b-91c6-df400672dfc0",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard & Mouse",
+                    "action": "ADS",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7ceea0c4-309a-4c51-8f34-a1208f447f93",
                     "path": "<Keyboard>/1",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard & Mouse",
-                    "action": "PrimaryWeapon",
+                    "action": "FirstSlot",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "a28719df-e81b-40f2-8483-69cfc998e29a",
+                    "id": "340da2cd-21d0-490d-a2f8-11249eeb8260",
                     "path": "<Keyboard>/2",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard & Mouse",
-                    "action": "SecondaryWeapon",
+                    "action": "SecondSlot",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "bd3ee097-94aa-48e5-b026-608d7d008803",
+                    "id": "b16f90d6-abac-4726-a13c-6e8d2dbbeb24",
                     "path": "<Keyboard>/3",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard & Mouse",
-                    "action": "WithoutWeapon",
+                    "action": "ThirdSlot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0eb96909-63b3-4dc1-b599-01bb79551533",
+                    "path": "<Mouse>/scroll/y",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard & Mouse",
+                    "action": "MouseWheel",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

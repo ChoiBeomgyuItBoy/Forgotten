@@ -10,15 +10,25 @@ public class PlayerStateMachine : StateMachine
     [field: SerializeField] public PlayerHealth PlayerHealth { get; private set; }
 
     [field: Header("Values")]
-    [field: SerializeField] [field: Range(0.1f, 100f)] public float MouseSensitivity { get; private set; }
+    [field: SerializeField] [field: Range(0.1f, 100f)] private float FreeMouseSensitivity { get; set; }
+    [field: SerializeField] [field: Range(0.1f, 100f)] private float ADSMouseSensitivity { get; set; }
     [field: SerializeField] [field: Range(0.1f, 10f)] public float JumpForce { get; private set; }
-    [field: SerializeField] [field: Range(0.1f, 20f)] public float FreeMovementSpeed { get; set; }
+    [field: SerializeField] [field: Range(0.1f, 20f)] public float FreeMovementSpeed { get; private set; }
+
+    public float MouseSensitivity { get; private set; }
 
     public Transform MainCameraTransform { get; private set; }
 
-    private void Start()
+    private void OnEnable()
     {
         PlayerHealth.onPlayerDead += HandleDead;
+        InputReader.ADSEvent += HandleADS;
+        InputReader.ADSCancelEvent += HandleADSCancel;
+    }
+
+    private void Start()
+    {
+        MouseSensitivity = FreeMouseSensitivity;
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -31,6 +41,18 @@ public class PlayerStateMachine : StateMachine
     private void OnDisable()
     {
         PlayerHealth.onPlayerDead -= HandleDead;
+        InputReader.ADSEvent -= HandleADS;
+        InputReader.ADSCancelEvent -= HandleADSCancel;
+    }
+
+    private void HandleADS()
+    {
+        MouseSensitivity = ADSMouseSensitivity;
+    }
+
+    private void HandleADSCancel()
+    {
+        MouseSensitivity = FreeMouseSensitivity;
     }
 
     private void HandleDead()

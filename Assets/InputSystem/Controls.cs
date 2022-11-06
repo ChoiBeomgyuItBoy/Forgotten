@@ -64,28 +64,46 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""PrimaryWeapon"",
+                    ""name"": ""ADS"",
                     ""type"": ""Button"",
-                    ""id"": ""63ffba0e-c6b0-466f-8b9a-4e2c1e4e882e"",
+                    ""id"": ""553a9cff-18ae-4191-9a39-02b6c66c610c"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""SecondaryWeapon"",
+                    ""name"": ""FirstSlot"",
                     ""type"": ""Button"",
-                    ""id"": ""27b39dab-33ef-44c0-a131-ee037d2db53c"",
+                    ""id"": ""aae65015-99b4-4868-af2e-5a451a7420c2"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""WithoutWeapon"",
+                    ""name"": ""SecondSlot"",
                     ""type"": ""Button"",
-                    ""id"": ""1c289e48-db69-4f37-bc9e-883efaa460d2"",
+                    ""id"": ""68b018ed-20d6-4b21-8ccf-6b0847370660"",
                     ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ThirdSlot"",
+                    ""type"": ""Button"",
+                    ""id"": ""6a5fa347-40ec-494e-9df1-3d8d30577a1c"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""MouseWheel"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""c793f35b-1ef6-4445-a115-516b6147b45e"",
+                    ""expectedControlType"": ""Axis"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
@@ -182,34 +200,56 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""8968393f-e392-45f3-9b25-1ae1339cca51"",
+                    ""id"": ""e088baa5-7352-4f7b-91c6-df400672dfc0"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard & Mouse"",
+                    ""action"": ""ADS"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7ceea0c4-309a-4c51-8f34-a1208f447f93"",
                     ""path"": ""<Keyboard>/1"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard & Mouse"",
-                    ""action"": ""PrimaryWeapon"",
+                    ""action"": ""FirstSlot"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""a28719df-e81b-40f2-8483-69cfc998e29a"",
+                    ""id"": ""340da2cd-21d0-490d-a2f8-11249eeb8260"",
                     ""path"": ""<Keyboard>/2"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard & Mouse"",
-                    ""action"": ""SecondaryWeapon"",
+                    ""action"": ""SecondSlot"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""bd3ee097-94aa-48e5-b026-608d7d008803"",
+                    ""id"": ""b16f90d6-abac-4726-a13c-6e8d2dbbeb24"",
                     ""path"": ""<Keyboard>/3"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard & Mouse"",
-                    ""action"": ""WithoutWeapon"",
+                    ""action"": ""ThirdSlot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0eb96909-63b3-4dc1-b599-01bb79551533"",
+                    ""path"": ""<Mouse>/scroll/y"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard & Mouse"",
+                    ""action"": ""MouseWheel"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -241,9 +281,11 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         m_Player_Look = m_Player.FindAction("Look", throwIfNotFound: true);
         m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
         m_Player_Fire = m_Player.FindAction("Fire", throwIfNotFound: true);
-        m_Player_PrimaryWeapon = m_Player.FindAction("PrimaryWeapon", throwIfNotFound: true);
-        m_Player_SecondaryWeapon = m_Player.FindAction("SecondaryWeapon", throwIfNotFound: true);
-        m_Player_WithoutWeapon = m_Player.FindAction("WithoutWeapon", throwIfNotFound: true);
+        m_Player_ADS = m_Player.FindAction("ADS", throwIfNotFound: true);
+        m_Player_FirstSlot = m_Player.FindAction("FirstSlot", throwIfNotFound: true);
+        m_Player_SecondSlot = m_Player.FindAction("SecondSlot", throwIfNotFound: true);
+        m_Player_ThirdSlot = m_Player.FindAction("ThirdSlot", throwIfNotFound: true);
+        m_Player_MouseWheel = m_Player.FindAction("MouseWheel", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -307,9 +349,11 @@ public partial class @Controls : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Look;
     private readonly InputAction m_Player_Jump;
     private readonly InputAction m_Player_Fire;
-    private readonly InputAction m_Player_PrimaryWeapon;
-    private readonly InputAction m_Player_SecondaryWeapon;
-    private readonly InputAction m_Player_WithoutWeapon;
+    private readonly InputAction m_Player_ADS;
+    private readonly InputAction m_Player_FirstSlot;
+    private readonly InputAction m_Player_SecondSlot;
+    private readonly InputAction m_Player_ThirdSlot;
+    private readonly InputAction m_Player_MouseWheel;
     public struct PlayerActions
     {
         private @Controls m_Wrapper;
@@ -318,9 +362,11 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         public InputAction @Look => m_Wrapper.m_Player_Look;
         public InputAction @Jump => m_Wrapper.m_Player_Jump;
         public InputAction @Fire => m_Wrapper.m_Player_Fire;
-        public InputAction @PrimaryWeapon => m_Wrapper.m_Player_PrimaryWeapon;
-        public InputAction @SecondaryWeapon => m_Wrapper.m_Player_SecondaryWeapon;
-        public InputAction @WithoutWeapon => m_Wrapper.m_Player_WithoutWeapon;
+        public InputAction @ADS => m_Wrapper.m_Player_ADS;
+        public InputAction @FirstSlot => m_Wrapper.m_Player_FirstSlot;
+        public InputAction @SecondSlot => m_Wrapper.m_Player_SecondSlot;
+        public InputAction @ThirdSlot => m_Wrapper.m_Player_ThirdSlot;
+        public InputAction @MouseWheel => m_Wrapper.m_Player_MouseWheel;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -342,15 +388,21 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                 @Fire.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFire;
                 @Fire.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFire;
                 @Fire.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFire;
-                @PrimaryWeapon.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPrimaryWeapon;
-                @PrimaryWeapon.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPrimaryWeapon;
-                @PrimaryWeapon.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPrimaryWeapon;
-                @SecondaryWeapon.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSecondaryWeapon;
-                @SecondaryWeapon.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSecondaryWeapon;
-                @SecondaryWeapon.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSecondaryWeapon;
-                @WithoutWeapon.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnWithoutWeapon;
-                @WithoutWeapon.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnWithoutWeapon;
-                @WithoutWeapon.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnWithoutWeapon;
+                @ADS.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnADS;
+                @ADS.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnADS;
+                @ADS.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnADS;
+                @FirstSlot.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFirstSlot;
+                @FirstSlot.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFirstSlot;
+                @FirstSlot.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFirstSlot;
+                @SecondSlot.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSecondSlot;
+                @SecondSlot.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSecondSlot;
+                @SecondSlot.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSecondSlot;
+                @ThirdSlot.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnThirdSlot;
+                @ThirdSlot.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnThirdSlot;
+                @ThirdSlot.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnThirdSlot;
+                @MouseWheel.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMouseWheel;
+                @MouseWheel.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMouseWheel;
+                @MouseWheel.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMouseWheel;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -367,15 +419,21 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                 @Fire.started += instance.OnFire;
                 @Fire.performed += instance.OnFire;
                 @Fire.canceled += instance.OnFire;
-                @PrimaryWeapon.started += instance.OnPrimaryWeapon;
-                @PrimaryWeapon.performed += instance.OnPrimaryWeapon;
-                @PrimaryWeapon.canceled += instance.OnPrimaryWeapon;
-                @SecondaryWeapon.started += instance.OnSecondaryWeapon;
-                @SecondaryWeapon.performed += instance.OnSecondaryWeapon;
-                @SecondaryWeapon.canceled += instance.OnSecondaryWeapon;
-                @WithoutWeapon.started += instance.OnWithoutWeapon;
-                @WithoutWeapon.performed += instance.OnWithoutWeapon;
-                @WithoutWeapon.canceled += instance.OnWithoutWeapon;
+                @ADS.started += instance.OnADS;
+                @ADS.performed += instance.OnADS;
+                @ADS.canceled += instance.OnADS;
+                @FirstSlot.started += instance.OnFirstSlot;
+                @FirstSlot.performed += instance.OnFirstSlot;
+                @FirstSlot.canceled += instance.OnFirstSlot;
+                @SecondSlot.started += instance.OnSecondSlot;
+                @SecondSlot.performed += instance.OnSecondSlot;
+                @SecondSlot.canceled += instance.OnSecondSlot;
+                @ThirdSlot.started += instance.OnThirdSlot;
+                @ThirdSlot.performed += instance.OnThirdSlot;
+                @ThirdSlot.canceled += instance.OnThirdSlot;
+                @MouseWheel.started += instance.OnMouseWheel;
+                @MouseWheel.performed += instance.OnMouseWheel;
+                @MouseWheel.canceled += instance.OnMouseWheel;
             }
         }
     }
@@ -395,8 +453,10 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         void OnLook(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
         void OnFire(InputAction.CallbackContext context);
-        void OnPrimaryWeapon(InputAction.CallbackContext context);
-        void OnSecondaryWeapon(InputAction.CallbackContext context);
-        void OnWithoutWeapon(InputAction.CallbackContext context);
+        void OnADS(InputAction.CallbackContext context);
+        void OnFirstSlot(InputAction.CallbackContext context);
+        void OnSecondSlot(InputAction.CallbackContext context);
+        void OnThirdSlot(InputAction.CallbackContext context);
+        void OnMouseWheel(InputAction.CallbackContext context);
     }
 }

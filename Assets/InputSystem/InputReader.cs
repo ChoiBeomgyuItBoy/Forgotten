@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -7,11 +8,19 @@ public class InputReader : MonoBehaviour, Controls.IPlayerActions
     public Vector2 MovementValue { get; private set; }
     public Vector2 MouseValue { get; private set; }
 
+    public float ScrollWheelValue { get; private set; }
+
+    public delegate IEnumerator FireEventHandler();
+
     public event Action JumpEvent;
-    public event Action FireEvent;
-    public event Action PrimaryWeaponEvent;
-    public event Action SecondaryWeaponEvent;
-    public event Action WithoutWeaponEvent;
+    public event FireEventHandler FireEvent;
+    public event Action ADSEvent;
+    public event Action ADSCancelEvent;
+    public event Action FirstSlotEvent;
+    public event Action SecondSlotEvent;
+    public event Action ThirdSlotEvent;
+    public event Action ScrollWheelEvent;
+
 
     private Controls controls;
 
@@ -50,27 +59,43 @@ public class InputReader : MonoBehaviour, Controls.IPlayerActions
     {
         if(!context.performed) { return; }
 
-        FireEvent?.Invoke();
+        StartCoroutine(FireEvent?.Invoke());
     }
 
-    public void OnPrimaryWeapon(InputAction.CallbackContext context)
+    public void OnADS(InputAction.CallbackContext context)
+    {
+        if(context.performed) { ADSEvent?.Invoke(); }
+        
+        else if(context.canceled) { ADSCancelEvent?.Invoke(); }
+    }
+
+    public void OnFirstSlot(InputAction.CallbackContext context)
     {
         if(!context.performed) { return; }
 
-        PrimaryWeaponEvent?.Invoke();
+        FirstSlotEvent?.Invoke();
     }
 
-    public void OnSecondaryWeapon(InputAction.CallbackContext context)
+    public void OnSecondSlot(InputAction.CallbackContext context)
     {
         if(!context.performed) { return; }
 
-        SecondaryWeaponEvent?.Invoke();
+        SecondSlotEvent?.Invoke();
     }
 
-    public void OnWithoutWeapon(InputAction.CallbackContext context)
+    public void OnThirdSlot(InputAction.CallbackContext context)
     {
         if(!context.performed) { return; }
 
-        WithoutWeaponEvent?.Invoke();
+        ThirdSlotEvent?.Invoke();
+    }
+
+    public void OnMouseWheel(InputAction.CallbackContext context)
+    {
+        if(!context.performed) { return; }
+
+        ScrollWheelEvent?.Invoke();
+
+        ScrollWheelValue = context.ReadValue<float>();
     }
 }
