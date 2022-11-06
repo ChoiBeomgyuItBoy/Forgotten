@@ -21,6 +21,8 @@ public class WeaponZoom : MonoBehaviour
 
     private void OnDisable()
     {
+        HandleADSCancel();
+
         inputReader.ADSEvent -= HandleADS;
         inputReader.ADSCancelEvent -= HandleADSCancel;
     }

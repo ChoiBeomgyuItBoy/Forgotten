@@ -9,6 +9,7 @@ public class EnemyStateMachine : StateMachine
     [field: SerializeField] public NavMeshAgent Agent { get; private set; }
     [field: SerializeField] public EnemyAnimationHandler AnimationHandler { get; private set; }
     [field: SerializeField] public EnemyHealth EnemyHealth { get; private set; }
+    [field: SerializeField] public GameObject[] ItemsToDrop { get; private set; }
 
     [field: Header("Values")]
     [field: SerializeField] [field: Range(0.1f, 20f)] public float MovementSpeed { get; private set; }
@@ -38,11 +39,6 @@ public class EnemyStateMachine : StateMachine
     private void HandleDeath()
     {
         SwitchState(new EnemyDeadState(this));
-    }
-
-    public void DestroyMyself()
-    {
-        Destroy(gameObject);
     }
 
     private void OnDrawGizmosSelected()

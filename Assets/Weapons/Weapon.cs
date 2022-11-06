@@ -95,7 +95,7 @@ public class Weapon : MonoBehaviour
 
     private void HandePlayerDead()
     {
-        Destroy(this);
+        inputReader.FireEvent -= HandleFire;
     }
 
 }

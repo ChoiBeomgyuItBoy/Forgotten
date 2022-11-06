@@ -1037,6 +1037,10 @@ MonoBehaviour:
   <Agent>k__BackingField: {fileID: 8661818427064148117}
   <AnimationHandler>k__BackingField: {fileID: 3322892625484590829}
   <EnemyHealth>k__BackingField: {fileID: 7874618967663138484}
+  <ItemsToDrop>k__BackingField:
+  - {fileID: 5863987979065245393, guid: 03a50953a51697c43ba67c2dfa9b8f87, type: 3}
+  - {fileID: 5863987979065245393, guid: ea71d841a67da224c81e488054e40f9a, type: 3}
+  - {fileID: 5863987979065245393, guid: d4e9dfd25e32c874999590fe3112e761, type: 3}
   <MovementSpeed>k__BackingField: 6
   <ChaseRange>k__BackingField: 7
   <AttackRange>k__BackingField: 1.8

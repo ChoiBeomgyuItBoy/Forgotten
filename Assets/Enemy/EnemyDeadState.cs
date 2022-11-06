@@ -14,9 +14,20 @@ public class EnemyDeadState : EnemyBaseState
     {
         if(stateMachine.AnimationHandler.AnimationIsOver("Death")) 
         {
-            stateMachine.DestroyMyself(); 
+            DropRandomItem();
+            MonoBehaviour.Destroy(stateMachine.gameObject);
         }   
     }
 
     public override void Exit() { }
+
+    private void DropRandomItem()
+    {
+        int itemsLength = stateMachine.ItemsToDrop.Length;
+        int randomIndex = Random.Range(0, itemsLength);
+
+        GameObject item = MonoBehaviour.Instantiate(stateMachine.ItemsToDrop[randomIndex], stateMachine.transform);
+
+        item.transform.parent = GameObject.FindObjectOfType<Pickups>().transform;
+    }
 }

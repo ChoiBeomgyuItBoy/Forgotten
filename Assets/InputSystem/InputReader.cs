@@ -59,6 +59,8 @@ public class InputReader : MonoBehaviour, Controls.IPlayerActions
     {
         if(!context.performed) { return; }
 
+        if(FireEvent == null) { return; }
+  
         StartCoroutine(FireEvent?.Invoke());
     }
 
