@@ -50,7 +50,7 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 1
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
@@ -4841,7 +4841,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1699d66539ed364438e7643dc573c5ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToDestroy: 2
+  timeToDestroy: 1
 --- !u!1 &1845643716156742
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,14 +8,17 @@ public class PlayerHealth : MonoBehaviour, IHealth
     public float CurrentHealth { get; private set; }
 
     public event Action onHealthChange;
+    public event Action onPlayerHeal;
     public event Action onPlayerDead;
 
     private bool IsDead => CurrentHealth <= 0;
+    public bool HasMaxHealth => CurrentHealth >= MaxHealth;
 
     private void Awake()
     {
         CurrentHealth = MaxHealth;
     }
+
 
     public void TakeDamage(float amount)
     {
@@ -26,6 +29,17 @@ public class PlayerHealth : MonoBehaviour, IHealth
         onHealthChange?.Invoke();
 
         if(IsDead) { Die(); }
+    }
+
+    public void Heal(float amount)
+    {
+        if(IsDead) { return; }
+        if(HasMaxHealth) { return;}
+
+        CurrentHealth += amount;
+
+        onHealthChange?.Invoke();
+        onPlayerHeal?.Invoke();
     }
 
     private void Die()

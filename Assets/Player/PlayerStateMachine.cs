@@ -1,4 +1,4 @@
-using UnityEngine;
+ using UnityEngine;
 
 [RequireComponent(typeof(InputReader), typeof(CharacterController), typeof(ForceReceiver))]
 public class PlayerStateMachine : StateMachine
