@@ -157,7 +157,7 @@ Transform:
   m_Children:
   - {fileID: 1145997911583712526}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!143 &1145997911941680072
 CharacterController:
@@ -170,13 +170,13 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 2
-  m_Radius: 0.5
+  m_Height: 1
+  m_Radius: 1.5
   m_SlopeLimit: 45
   m_StepOffset: 0.3
-  m_SkinWidth: 0.05
+  m_SkinWidth: 0.15
   m_MinMoveDistance: 0
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Center: {x: 0, y: 1.8, z: 0}
 --- !u!82 &1092835075008374987
 AudioSource:
   m_ObjectHideFlags: 0
@@ -657,6 +657,11 @@ PrefabInstance:
       propertyPath: inputReader
       value: 
       objectReference: {fileID: 1145997911941680078}
+    - target: {fileID: 520725316658885236, guid: 78af386338403f448978285dee719765,
+        type: 3}
+      propertyPath: playerHealth
+      value: 
+      objectReference: {fileID: 4921872231342625202}
     - target: {fileID: 3821292967026898321, guid: 78af386338403f448978285dee719765,
         type: 3}
       propertyPath: m_Name
