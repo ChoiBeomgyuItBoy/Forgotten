@@ -16,8 +16,6 @@ public class EnemyIdleState : EnemyBaseState
     {
         Move(deltaTime);
 
-        FacePlayer(deltaTime);
-
         if(IsInChaseRange())
         {
             stateMachine.SwitchState(new EnemyChaseState(stateMachine));

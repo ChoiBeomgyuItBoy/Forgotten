@@ -45,8 +45,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.3871626, y: 0.82982373, z: 0.34136072}
-  m_Center: {x: -0.57197964, y: -0.3404292, z: -0.08774466}
+  m_Size: {x: 1.3871627, y: 1.7390034, z: 0.6426244}
+  m_Center: {x: -0.57197964, y: -0.79501903, z: 0.06288738}
 --- !u!54 &7877254519128201744
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -862,7 +862,7 @@ GameObject:
   - component: {fileID: 8949780890970428024}
   - component: {fileID: 6417033823839529523}
   - component: {fileID: 5561259496403430002}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -878,7 +878,7 @@ Transform:
   m_GameObject: {fileID: 87395006835678946}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 1.5000001, y: 1.5, z: 1.5000001}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 87395006835581256}
@@ -900,7 +900,7 @@ NavMeshAgent:
   m_Acceleration: 0
   avoidancePriority: 50
   m_AngularSpeed: 0
-  m_StoppingDistance: 1
+  m_StoppingDistance: 0.5
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -1062,9 +1062,10 @@ MonoBehaviour:
   <ItemDropper>k__BackingField: {fileID: 6417033823839529523}
   <SFXHandler>k__BackingField: {fileID: 5561259496403430002}
   <MovementSpeed>k__BackingField: 6
-  <ChaseRange>k__BackingField: 17.3
-  <AttackRange>k__BackingField: 1.8
+  <ChaseRange>k__BackingField: 6.3
+  <AttackRange>k__BackingField: 2.5
   <RotationSpeed>k__BackingField: 5
+  <PlayScreamer>k__BackingField: 1
 --- !u!114 &7874618967663138484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1139,9 +1140,9 @@ MonoBehaviour:
   itemSpawner: {fileID: 0}
   items:
   - {fileID: 5863987979065245393, guid: 03a50953a51697c43ba67c2dfa9b8f87, type: 3}
-  - {fileID: 5863987979065245393, guid: ea71d841a67da224c81e488054e40f9a, type: 3}
   - {fileID: 5863987979065245393, guid: d4e9dfd25e32c874999590fe3112e761, type: 3}
   - {fileID: 5863987979065245393, guid: eddd4b7417d80d6439fe2ef7707f5f6f, type: 3}
+  - {fileID: 5863987979065245393, guid: ea71d841a67da224c81e488054e40f9a, type: 3}
 --- !u!114 &5561259496403430002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1163,6 +1164,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: b41f3d0a5d1bf3045adef66308d3fc87, type: 3}
   - {fileID: 8300000, guid: 7faecccf18863c14c85dcb8bb3ff22b4, type: 3}
   - {fileID: 8300000, guid: 4f89ee5fa4f222c4b9670fc839280732, type: 3}
+  screamer: {fileID: 8300000, guid: bd4d5a1e5958a464caa3df15012750bc, type: 3}
 --- !u!1 &87395006835679776
 GameObject:
   m_ObjectHideFlags: 0
@@ -2665,7 +2667,6 @@ Transform:
   m_Children:
   - {fileID: 87395006835475420}
   - {fileID: 87395006835578532}
-  - {fileID: 2002026658121619910}
   m_Father: {fileID: 87395006835490182}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 16.538809, y: 174.94577, z: 3.2155185}
@@ -3433,118 +3434,3 @@ Transform:
   m_Father: {fileID: 87395006835473918}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2518751180572357432
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2002026658121619910}
-  - component: {fileID: 7922078224623164185}
-  - component: {fileID: 4834101495561155007}
-  m_Layer: 0
-  m_Name: Point Light
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2002026658121619910
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2518751180572357432}
-  m_LocalRotation: {x: 0.16018216, y: -0.000000108845555, z: -0.000000031223426, w: -0.9870875}
-  m_LocalPosition: {x: -0, y: -0.035, z: 0.199}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 87395006835560706}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!108 &7922078224623164185
-Light:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2518751180572357432}
-  m_Enabled: 1
-  serializedVersion: 10
-  m_Type: 2
-  m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.1
-  m_Range: 0.55
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 0
-    m_Resolution: -1
-    m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
-    m_CullingMatrixOverride:
-      e00: 1
-      e01: 0
-      e02: 0
-      e03: 0
-      e10: 0
-      e11: 1
-      e12: 0
-      e13: 0
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-    m_UseCullingMatrixOverride: 0
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingLayerMask: 1
-  m_Lightmapping: 4
-  m_LightShadowCasterMode: 0
-  m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
-  m_UseBoundingSphereOverride: 0
-  m_UseViewFrustumForShadowCasterCull: 1
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
---- !u!114 &4834101495561155007
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2518751180572357432}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Version: 1
-  m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
-  m_LightLayerMask: 1
-  m_CustomShadowLayers: 0
-  m_ShadowLayerMask: 1
-  m_LightCookieSize: {x: 1, y: 1}
-  m_LightCookieOffset: {x: 0, y: 0}

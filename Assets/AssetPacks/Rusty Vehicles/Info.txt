@@ -1,0 +1,17 @@
+2 X Rusty old Vehicles.
+
+Hillbilly type vehicle has 141 polygons and 17 polygons per wheel.
+
+Sedan type vehicle has 93 polygons and 16 polygons per wheel.
+
+There is also a small shader script to show double sided normals.
+
+Also included are 6 X original uncompressed textures in .TIF format.
+
+Textures include Diffuse, Specular and Texture + Alpha for Specular in Unity.
+
+Enjoy!!
+
+email: duane_mayberry@yahoo.co.uk
+
+web: www.duanesmind.co.uk

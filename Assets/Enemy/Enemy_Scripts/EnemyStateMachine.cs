@@ -18,7 +18,9 @@ public class EnemyStateMachine : StateMachine
     [field: SerializeField] [field: Range(0.1f, 50f)] public float ChaseRange { get; private set; }
     [field: SerializeField] [field: Range(0.1f, 20f)] public float AttackRange { get; private set; }
     [field: SerializeField] [field: Range(0.1f, 20f)] public float RotationSpeed { get; private set; }
+    [field: SerializeField] public bool PlayScreamer { get; private set; } = false;
 
+    public bool AlreadyPlayedScreamer { get; set; } = false;
     public PlayerHealth Player { get; private set; }
 
     private void OnEnable()
@@ -55,7 +57,7 @@ public class EnemyStateMachine : StateMachine
         // Attack Range Gizmos
         Gizmos.color = Color.red;
         Vector3 myPosition = transform.position;
-        float gizmosCenterOffset = 1f;
+        float gizmosCenterOffset = 1.3f;
 
         myPosition.y = myPosition.y + gizmosCenterOffset;
 

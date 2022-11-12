@@ -276,6 +276,7 @@ MonoBehaviour:
   muzzle: {fileID: 1078449562676819473}
   inputReader: {fileID: 0}
   ammoSlot: {fileID: 0}
+  ammoText: {fileID: 0}
   shootDistance: 50
   shootDamage: 20
   shootDelay: 0.3

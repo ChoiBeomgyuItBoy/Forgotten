@@ -45,7 +45,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1.45
+  m_Intensity: 0.1
   m_Range: 10
   m_SpotAngle: 116.29563
   m_InnerSpotAngle: 40.837883
@@ -149,7 +149,7 @@ Transform:
   - {fileID: 2369891851739952200}
   - {fileID: 7755603337192795290}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &9011597287823034411
 SphereCollider:
@@ -177,7 +177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ammoType: 0
-  ammoAmount: 20
+  ammoAmount: 10
 --- !u!114 &288635016007527674
 MonoBehaviour:
   m_ObjectHideFlags: 0

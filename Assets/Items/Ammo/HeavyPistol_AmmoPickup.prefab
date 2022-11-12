@@ -380,7 +380,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1.45
+  m_Intensity: 0.1
   m_Range: 10
   m_SpotAngle: 116.29563
   m_InnerSpotAngle: 40.837883
@@ -655,7 +655,7 @@ Transform:
   - {fileID: 2658505257843145590}
   - {fileID: 4252479334421651374}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &9011597287823034411
 SphereCollider:

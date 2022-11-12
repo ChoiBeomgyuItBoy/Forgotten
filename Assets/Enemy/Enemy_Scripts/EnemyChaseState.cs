@@ -2,11 +2,17 @@ using UnityEngine;
 
 public class EnemyChaseState : EnemyBaseState
 {
+
     public EnemyChaseState(EnemyStateMachine stateMachine) : base(stateMachine) { }
 
     public override void Enter() 
     { 
-        stateMachine.SFXHandler.PlayRandomAttackClip();
+        if(stateMachine.PlayScreamer && !stateMachine.AlreadyPlayedScreamer) 
+        { 
+            stateMachine.SFXHandler.PlayScreamer();
+            stateMachine.AlreadyPlayedScreamer = true; 
+        }
+
         stateMachine.Animations.OnLocomotion();
     }
 

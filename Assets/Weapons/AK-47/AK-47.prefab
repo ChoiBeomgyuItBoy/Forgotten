@@ -107,6 +107,7 @@ MonoBehaviour:
   muzzle: {fileID: 7870323556358144460}
   inputReader: {fileID: 0}
   ammoSlot: {fileID: 0}
+  ammoText: {fileID: 0}
   shootDistance: 120
   shootDamage: 20
   shootDelay: 0
@@ -122,6 +123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a68b9918c813a804fa91eaf40daeca33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerHealth: {fileID: 0}
   inputReader: {fileID: 0}
   weaponZoomIn: 20
   weaponZoomOut: 40

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using TMPro;
 
 public class Weapon : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class Weapon : MonoBehaviour
     [SerializeField] private Transform muzzle;
     [SerializeField] private InputReader inputReader;
     [SerializeField] private Ammo ammoSlot;
+    [SerializeField] private TextMeshProUGUI ammoText;
     [SerializeField] private float shootDistance;
     [SerializeField] private float shootDamage;
     [SerializeField] private float shootDelay;
@@ -35,10 +37,22 @@ public class Weapon : MonoBehaviour
         mainCameraTransform = Camera.main.transform;
     }
 
+    private void Update()
+    {
+        DisplayAmmo();
+    }
+
     private void OnDisable()
     {
         inputReader.FireEvent -= HandleFire;
         playerHealth.onPlayerDead -= HandePlayerDead;
+    }
+
+    private void DisplayAmmo()
+    {
+        int currentAmmo = ammoSlot.GetAmmo(ammoType);
+
+        ammoText.text = $"Ammo: {currentAmmo}";
     }
 
     private IEnumerator HandleFire()

@@ -5,6 +5,7 @@ public class EnemySFXHandler : MonoBehaviour
 {
     [SerializeField] private AudioClip[] attackClips;
     [SerializeField] private AudioClip[] deadClips;
+    [SerializeField] private AudioClip screamer;
 
     private AudioSource audioSource;
 
@@ -25,6 +26,11 @@ public class EnemySFXHandler : MonoBehaviour
         AudioClip clip = GetRandomClip(deadClips);
 
         audioSource.PlayOneShot(clip);
+    }
+
+    public void PlayScreamer()
+    {
+        audioSource.PlayOneShot(screamer);
     }
 
     private AudioClip GetRandomClip(AudioClip[] clips)
