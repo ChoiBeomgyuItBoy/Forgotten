@@ -20,6 +20,7 @@ public class InputReader : MonoBehaviour, Controls.IPlayerActions
     public event Action SecondSlotEvent;
     public event Action ThirdSlotEvent;
     public event Action ScrollWheelEvent;
+    public event Action PauseEvent;
 
 
     private Controls controls;
@@ -99,5 +100,12 @@ public class InputReader : MonoBehaviour, Controls.IPlayerActions
         ScrollWheelEvent?.Invoke();
 
         ScrollWheelValue = context.ReadValue<float>();
+    }
+
+    public void OnPause(InputAction.CallbackContext context)
+    {
+        if(!context.performed) { return; }
+
+        PauseEvent?.Invoke();
     }
 }

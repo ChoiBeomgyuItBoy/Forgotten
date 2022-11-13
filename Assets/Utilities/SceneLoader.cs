@@ -5,16 +5,23 @@ using UnityEngine.UI;
 public class SceneLoader : MonoBehaviour
 {
     [SerializeField] private Button reloadButton;
-    [SerializeField] private Button quitButton;
+    [SerializeField] private Button mainMenuButton;
 
     private int currentSceneIndex;
 
-    private void Start()
+    private void OnEnable()
     {
         currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
 
         reloadButton.onClick.AddListener(ReloadScene);
-        quitButton.onClick.AddListener(QuitGame);
+        mainMenuButton.onClick.AddListener(LoadMainMenu);
+        
+    }
+
+    private void OnDisable()
+    {
+        reloadButton.onClick.AddListener(ReloadScene);
+        mainMenuButton.onClick.AddListener(LoadMainMenu);
     }
 
     public void ReloadScene()
@@ -24,9 +31,10 @@ public class SceneLoader : MonoBehaviour
         Time.timeScale = 1f;
     }
 
-    public void QuitGame()
+    public void LoadMainMenu()
     {
-        Debug.Log("Quitting");
-        Application.Quit();
+        SceneManager.LoadScene(0);
+
+        Time.timeScale = 1f;
     }
 }

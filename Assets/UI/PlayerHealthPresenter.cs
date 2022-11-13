@@ -8,22 +8,25 @@ public class PlayerHealthPresenter : MonoBehaviour
     [SerializeField] Slider healthBar;
     [SerializeField] Canvas gameOverCanvas;
     [SerializeField] Button reloadButton;
-    [SerializeField] Button quitButton;
+    [SerializeField] Button mainMenuButton;
 
     [SerializeField] float enableCursorDelay;
+
+    private PauseMenu pauseMenu;
 
     void OnEnable()
     {
         reloadButton.gameObject.SetActive(false);
-        quitButton.gameObject.SetActive(false);
+        mainMenuButton.gameObject.SetActive(false);
+
+        playerHealth.onHealthChange += UpdateHealthBar;
+        playerHealth.onPlayerDead += ShowGameOverCanvas;
     }
 
 
     void Start()
     {
-        playerHealth.onHealthChange += UpdateHealthBar;
-
-        playerHealth.onPlayerDead += ShowGameOverCanvas;
+        pauseMenu = GetComponent<PauseMenu>();
 
         UpdateHealthBar();
     }
@@ -35,6 +38,8 @@ public class PlayerHealthPresenter : MonoBehaviour
 
     void ShowGameOverCanvas()
     {
+        pauseMenu.enabled = false;
+
         StartCoroutine(EnableUI());
         
         gameOverCanvas.gameObject.SetActive(true);
@@ -48,7 +53,7 @@ public class PlayerHealthPresenter : MonoBehaviour
         Cursor.visible = true;
 
         reloadButton.gameObject.SetActive(true);
-        quitButton.gameObject.SetActive(true);
+        mainMenuButton.gameObject.SetActive(true);
     }
 
 }

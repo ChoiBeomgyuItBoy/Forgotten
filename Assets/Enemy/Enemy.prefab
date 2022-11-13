@@ -1061,7 +1061,7 @@ MonoBehaviour:
   <Animations>k__BackingField: {fileID: 8949780890970428024}
   <ItemDropper>k__BackingField: {fileID: 6417033823839529523}
   <SFXHandler>k__BackingField: {fileID: 5561259496403430002}
-  <MovementSpeed>k__BackingField: 6
+  <MovementSpeed>k__BackingField: 7
   <ChaseRange>k__BackingField: 6.3
   <AttackRange>k__BackingField: 2.5
   <RotationSpeed>k__BackingField: 5
