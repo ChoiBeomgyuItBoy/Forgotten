@@ -10,7 +10,7 @@
   - Designed and Developed for Educational Purposes Only.
   
 ## Game Loop:
-  - Use your shooting and strategy abilities to get out from an abandoned hospital, nobody knows why it was abandoned though... some say unkwon creatures live within the facility, better get out as quickly as you can.
+  - Use your shooting and strategy abilities to get out from a creepy abandoned hospital, nobody knows why it was abandoned though... some say unknown creatures live within the facility, better get out as quickly as you can.
 
 ## Test Play:
   - https://drive.google.com/file/d/1kXMKE0UjYpgstZr13OYuvAmyyID-eV2I/view?usp=sharing
