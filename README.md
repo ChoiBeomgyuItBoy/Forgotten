@@ -9,6 +9,7 @@
   - Forgotten is a Horror / First Person Shooter / Survival / Puzzle Game.
   - Implementation of AI State Machines from Scratch.
   - Implementation of Key-Door System for Interesting Game Loop using the Observer & Strategy Patterns.
+  - Use of Model View Presenter for all UI.
   - Made with help from the Complete Unity C# Game Developer Course from Gamedev.tv
   
 ## Game Loop:
