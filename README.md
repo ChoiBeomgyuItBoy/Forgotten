@@ -16,5 +16,5 @@
   - Use your shooting and strategy abilities to get out from a creepy abandoned hospital, nobody knows why it was abandoned though... some say unknown creatures live within the facility, better get out as quickly as you can.
 
 ## Play Test:
-  - https://drive.google.com/file/d/1kXMKE0UjYpgstZr13OYuvAmyyID-eV2I/view?usp=sharing
+  - https://github.com/ChoiBeomgyuItBoy/Forgotten/releases/tag/Test
 
