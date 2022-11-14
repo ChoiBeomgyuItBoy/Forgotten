@@ -12,6 +12,6 @@
 ## Game Loop:
   - Use your shooting and strategy abilities to get out from a creepy abandoned hospital, nobody knows why it was abandoned though... some say unknown creatures live within the facility, better get out as quickly as you can.
 
-## Test Play:
+## Play Test:
   - https://drive.google.com/file/d/1kXMKE0UjYpgstZr13OYuvAmyyID-eV2I/view?usp=sharing
 
