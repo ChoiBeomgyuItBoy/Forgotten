@@ -17,4 +17,5 @@
 
 ## Play Test:
   - https://github.com/ChoiBeomgyuItBoy/Forgotten/releases/tag/Test
+  - https://drive.google.com/file/d/1kXMKE0UjYpgstZr13OYuvAmyyID-eV2I/view?usp=sharing
 
